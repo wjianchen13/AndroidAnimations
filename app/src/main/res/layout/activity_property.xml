@@ -1,0 +1,154 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_test1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="缩放"
+            android:textAllCaps="false"
+            android:onClick="onScale" />
+
+        <Button
+            android:id="@+id/btn_test2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="自定义View ValueAnimator"
+            android:textAllCaps="false"
+            android:onClick="onValueAnimator" />
+
+        <Button
+            android:id="@+id/btn_test3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="ObjectAnimator"
+            android:textAllCaps="false"
+            android:onClick="onObjectAnimator" />
+
+        <Button
+            android:id="@+id/btn_test4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="自定义控件颜色改变"
+            android:textAllCaps="false"
+            android:onClick="onCustomColor" />
+
+        <Button
+            android:id="@+id/btn_test5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="ViewPropertyAnimator"
+            android:textAllCaps="false"
+            android:onClick="onViewPropertyAnimator" />
+
+        <Button
+            android:id="@+id/btn_test6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="AnimatorSet 组合动画"
+            android:textAllCaps="false"
+            android:onClick="onAnimatorSet" />
+
+        <Button
+            android:id="@+id/btn_test7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="AnimatorSet 测试"
+            android:textAllCaps="false"
+            android:onClick="onTest" />
+
+        <Button
+            android:id="@+id/btn_test8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="AnimatorSet 测试"
+            android:textAllCaps="false"
+            android:onClick="onTest1" />
+
+        <Button
+            android:id="@+id/btn_test9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="倒计时"
+            android:textAllCaps="false"
+            android:onClick="onTest2" />
+
+        <Button
+            android:id="@+id/btn_test10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="旋转"
+            android:textAllCaps="false"
+            android:onClick="onRotate" />
+
+        <Button
+            android:id="@+id/btn_test11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="旋转view封装"
+            android:textAllCaps="false"
+            android:onClick="onRotateView" />
+
+        <Button
+            android:id="@+id/btn_test12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="旋转view测试"
+            android:textAllCaps="false"
+            android:onClick="onTestRotateView" />
+
+        <Button
+            android:id="@+id/btn_test13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="粉丝团动画"
+            android:textAllCaps="false"
+            android:onClick="onFans" />
+
+    </LinearLayout>
+</ScrollView>

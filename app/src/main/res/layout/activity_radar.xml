@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    
+<!--    <FrameLayout
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_studio_pk_radar">
+
+        <ImageView
+            android:id="@+id/imgv_pointer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_studio_pk_radar_point"/>
+
+    </FrameLayout>-->
+
+    <com.cold.androidanimations.radar.RadarView
+        android:id="@+id/rv_test"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/>
+    
+    <Button
+        android:id="@+id/tv_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="开始"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:onClick="onStart"/>
+
+    <Button
+        android:id="@+id/tv_stop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="结束"
+        android:gravity="center"
+        android:layout_above="@id/tv_start"
+        android:onClick="onStop"/>
+
+</RelativeLayout>
+

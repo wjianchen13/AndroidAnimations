@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cold.androidanimations">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.cold.androidanimations.frame.FrameActivity"/>
+        <activity android:name="com.cold.androidanimations.tween.TweenActivity"/>
+        <activity android:name="com.cold.androidanimations.property.PropertyActivity"/>
+        <activity android:name="com.cold.androidanimations.property.valueanimator.ScaleActivity"/>
+        <activity android:name="com.cold.androidanimations.property.valueanimator.ValueAnimatorActivity"/>
+        <activity android:name="com.cold.androidanimations.property.objectanimator.ObjectAnimatorActivity"/>
+        <activity android:name="com.cold.androidanimations.property.objectanimator.customcolor.CustomColorActivity"/>
+        <activity android:name="com.cold.androidanimations.property.ViewPropertyAnimatorActivity"/>
+        <activity android:name="com.cold.androidanimations.property.AnimatorSetActivity"/>
+        <activity android:name="com.cold.androidanimations.property.TestActivity"/>
+        <activity android:name="com.cold.androidanimations.property.TestActivity1"/>
+        <activity android:name="com.cold.androidanimations.countdown.CountDownActivity"/>
+        <activity android:name="com.cold.androidanimations.rotate.RotateActivity"/>
+        <activity android:name="com.cold.androidanimations.rotate.RotateViewActivity"/>
+        <activity android:name="com.cold.androidanimations.rotate.TestRotateViewActivity"/>
+        <activity android:name="com.cold.androidanimations.ShowActivity"/>
+        <activity android:name="com.cold.androidanimations.fans.LeonidsActivity"/>
+        <activity android:name="com.cold.androidanimations.fans.FansActivity"/>
+        <activity android:name="com.cold.androidanimations.property.fans.TestFansActivity"/>
+        <activity android:name="com.cold.androidanimations.radar.RadarActivity"/>
+        <activity android:name="com.cold.androidanimations.pan.PanActivity"/>
+        
+    </application>
+
+</manifest>

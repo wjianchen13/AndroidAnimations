@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">AndroidAnimations</string>
+    <string name="card_front">正面</string>
+    <string name="card_back">反面</string>
+    <string name="fans_tip">您已成功加入主播的粉丝团\n接下来努力完成任务守护主播吧~</string>
+</resources>

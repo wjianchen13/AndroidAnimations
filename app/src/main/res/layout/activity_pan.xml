@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.cold.androidanimations.pan.PanView
+        android:id="@+id/pv_test"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="20dp"
+        android:background="#ff00ff00"
+        android:layout_centerHorizontal="true"/>
+    
+    <Button
+        android:id="@+id/tv_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="开始"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:onClick="onStart"/>
+
+    <Button
+        android:id="@+id/tv_stop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="结束"
+        android:gravity="center"
+        android:layout_above="@id/tv_start"
+        android:onClick="onStop"/>
+
+</RelativeLayout>
+

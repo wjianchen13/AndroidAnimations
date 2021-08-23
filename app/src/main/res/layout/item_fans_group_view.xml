@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <FrameLayout
+        android:id="@+id/flyt_shadow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#cc000000"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="95dp">
+
+        <ImageView
+            android:id="@+id/imgv_light"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/ic_fans_group_light" />
+
+        <LinearLayout
+            android:id="@+id/llyt_particle"
+            android:layout_width="360dp"
+            android:layout_height="360dp"
+            android:orientation="vertical" />
+
+        <ImageView
+            android:id="@+id/imgv_fans"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_marginTop="90dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/ic_fans_group_anim"/>
+
+        <ImageView
+            android:id="@+id/imgv_close"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/ic_close"
+            android:layout_alignRight="@id/imgv_light"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/tv_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:textColor="#ffffffff"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:lineSpacingMultiplier="1.5"
+            android:layout_below="@id/imgv_fans"
+            android:text="@string/fans_tip"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/tv_task"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="43dp"
+            android:textColor="#ffffffff"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:lineSpacingMultiplier="1.5"
+            android:layout_below="@id/tv_tip"
+            android:text="查看粉丝任务"
+            android:background="@drawable/bg_fans_group_task"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

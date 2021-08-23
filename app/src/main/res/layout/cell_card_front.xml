@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@+id/main_fl_card_front"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:focusable="false"
+    android:clickable="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="50dp">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@null"
+        android:padding="16dp"
+        android:background="@drawable/rectangle_front"/>
+
+    <TextView
+        android:id="@+id/tv_front"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/card_front"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"/>
+
+</FrameLayout>
