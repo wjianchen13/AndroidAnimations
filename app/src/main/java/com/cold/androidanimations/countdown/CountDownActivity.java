@@ -9,12 +9,10 @@ import android.annotation.TargetApi;
 import android.graphics.Path;
 import android.graphics.PointF;
 import android.os.Bundle;
-import android.os.CountDownTimer;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
-
+import androidx.appcompat.app.AppCompatActivity;
 import com.cold.androidanimations.R;
 import com.cold.androidanimations.property.valueanimator.BizerPointEvaluator;
 

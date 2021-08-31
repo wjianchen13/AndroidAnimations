@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.cold.androidanimations.kk.PanParamsLayout
+    <com.cold.androidanimations.kk.RotateTestLayout
         android:id="@+id/pl_test"
         android:layout_width="300dp"
         android:layout_height="300dp"
@@ -107,6 +107,25 @@
         android:text="添加9个"
         android:textAllCaps="false"
         android:onClick="onAdd9" />
+
+    <Button
+        android:id="@+id/btn_add10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_add6"
+        android:text="添加1个"
+        android:textAllCaps="false"
+        android:onClick="onAdd10" />
+
+    <Button
+        android:id="@+id/btn_add11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/btn_add10"
+        android:layout_toRightOf="@id/btn_add10"
+        android:text="旋转动画"
+        android:textAllCaps="false"
+        android:onClick="onAdd11" />
 
 </RelativeLayout>
 

@@ -4,6 +4,28 @@
     android:orientation="vertical">
 
     <Button
+        android:id="@+id/btn_testkk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="旋转"
+        android:textAllCaps="false"
+        android:onClick="onRotate" />
+
+    <Button
+        android:id="@+id/btn_test9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="旋转测试"
+        android:textAllCaps="false"
+        android:onClick="onRotateTest" />
+
+    <Button
         android:id="@+id/btn_test1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

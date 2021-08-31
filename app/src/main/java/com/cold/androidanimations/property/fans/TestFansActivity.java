@@ -4,7 +4,7 @@ import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.AccelerateInterpolator;
@@ -17,7 +17,7 @@ import android.widget.ImageView;
 import com.cold.androidanimations.R;
 import com.cold.androidanimations.rotate.RotateView;
 
-public class TestFansActivity extends AppCompatActivity{
+public class TestFansActivity extends AppCompatActivity {
 
     private ImageView imgvFans;
     private Button btnTest;

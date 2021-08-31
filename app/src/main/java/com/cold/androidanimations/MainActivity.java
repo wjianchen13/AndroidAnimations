@@ -2,12 +2,16 @@ package com.cold.androidanimations;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.cold.androidanimations.fans.FansActivity;
 import com.cold.androidanimations.fans.LeonidsActivity;
 import com.cold.androidanimations.frame.FrameActivity;
+import com.cold.androidanimations.kk.RotateActivity;
+import com.cold.androidanimations.kk.RotateTestActivity;
 import com.cold.androidanimations.pan.PanActivity;
 import com.cold.androidanimations.property.PropertyActivity;
 import com.cold.androidanimations.radar.RadarActivity;
@@ -106,6 +110,28 @@ public class MainActivity extends AppCompatActivity {
     public void onPan(View v) {
         Intent it = new Intent();
         it.setClass(MainActivity.this, PanActivity.class);
+        startActivity(it);
+    }
+
+    /**
+     * 旋转
+     * @param
+     * @return
+     */
+    public void onRotate(View v) {
+        Intent it = new Intent();
+        it.setClass(MainActivity.this, RotateActivity.class);
+        startActivity(it);
+    }
+
+    /**
+     * 旋转测试
+     * @param
+     * @return
+     */
+    public void onRotateTest(View v) {
+        Intent it = new Intent();
+        it.setClass(MainActivity.this, RotateTestActivity.class);
         startActivity(it);
     }
 }
