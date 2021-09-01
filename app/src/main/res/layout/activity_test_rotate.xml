@@ -1,0 +1,158 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    
+    <TextView
+        android:id="@+id/tv_test1"
+        android:layout_width="30dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:text="test"
+        android:background="#ff00ff00" />
+
+    <TextView
+        android:id="@+id/tv_test2"
+        android:layout_width="30dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:text="test2"
+        android:background="#ffff0000" />
+    
+    <TextView
+        android:id="@+id/tv_test3"
+        android:layout_width="30dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:text="test3"
+        android:background="#ff0000ff" />
+
+    <TextView
+        android:id="@+id/tv_test5"
+        android:layout_width="30dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:text="test5"
+        android:background="#ffffff00" />
+
+    <TextView
+        android:id="@+id/tv_test4"
+        android:layout_width="30dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:text="test4"
+        android:background="#ff00ffff" />
+
+    <Button
+        android:id="@+id/btn_test1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="旋转"
+        android:textAllCaps="false"
+        android:onClick="onRotate" />
+
+    <Button
+        android:id="@+id/btn_test2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/btn_test1"
+        android:layout_toRightOf="@id/btn_test1"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="测试"
+        android:textAllCaps="false"
+        android:onClick="onRotate1" />
+
+    <Button
+        android:id="@+id/btn_test3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/btn_test2"
+        android:layout_toRightOf="@id/btn_test2"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="插入View"
+        android:textAllCaps="false"
+        android:onClick="onAdd" />
+
+    <Button
+        android:id="@+id/btn_test4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_test1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="中心点"
+        android:textAllCaps="false"
+        android:onClick="onGet" />
+
+    <Button
+        android:id="@+id/btn_test5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/btn_test4"
+        android:layout_toRightOf="@id/btn_test4"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="移动"
+        android:textAllCaps="false"
+        android:onClick="onTrans" />
+
+    <Button
+        android:id="@+id/btn_test6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/btn_test5"
+        android:layout_toRightOf="@id/btn_test5"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="获取坐标"
+        android:textAllCaps="false"
+        android:onClick="onCoordinate" />
+
+    <Button
+        android:id="@+id/btn_test7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_test4"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="设定角度移动view"
+        android:textAllCaps="false"
+        android:onClick="onSetRotate" />
+    
+</RelativeLayout>
