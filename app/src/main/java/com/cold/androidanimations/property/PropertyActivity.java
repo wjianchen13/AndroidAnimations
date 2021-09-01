@@ -36,6 +36,18 @@ public class PropertyActivity extends AppCompatActivity {
     }
 
     /**
+     * 旋转
+     * @param
+     * @return
+     */
+    public void onTestRoatae1(View v) {
+        Intent it = new Intent();
+        it.setClass(PropertyActivity.this, TestRotateActivity1.class);
+        startActivity(it);
+    }
+
+
+    /**
      * 缩放
      * @param
      * @return

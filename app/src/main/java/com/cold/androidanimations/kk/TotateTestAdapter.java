@@ -19,7 +19,7 @@ public class TotateTestAdapter implements Adapter {
     
     View V3 = null;
 
-    private String url = "https://timg.kiwii.tv/upload/anchor_image/345X257/99/4029899_54acf4035e058.jpg";
+    private String url = "https://tstatic.lelevideo.com/upload/anchor_image/372X380/31/1032231_1619695214.jpg";
 
     /**
      * 需要显示的View数据列表

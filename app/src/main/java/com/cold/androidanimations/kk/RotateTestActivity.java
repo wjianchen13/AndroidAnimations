@@ -40,6 +40,7 @@ public class RotateTestActivity extends AppCompatActivity {
     public void onAdd10(View v) {
         List<PanItem> data = new ArrayList<>();
         data.add(new PanItem("test21", ""));
+        data.add(new PanItem("test22", ""));
         plTest.setAdapter(mAdapter = new TotateTestAdapter(this, data));
     }
     

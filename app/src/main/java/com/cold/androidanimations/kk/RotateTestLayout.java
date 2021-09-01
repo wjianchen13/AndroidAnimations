@@ -12,6 +12,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
 import com.cold.androidanimations.R;
 
@@ -77,7 +78,7 @@ public class RotateTestLayout extends FrameLayout {
      */
     private void initLinesPaint() {
         if(mBackgroundPaint == null)
-            return ;
+            mBackgroundPaint = new Paint();
         mBackgroundPaint.setColor(Color.argb(255, 0, 0, 255));       //设置画笔颜色
         mBackgroundPaint.setStyle(Paint.Style.FILL);  //设置画笔模式为填充
         mBackgroundPaint.setStrokeWidth(5.0f);         //设置画笔宽度
@@ -118,7 +119,7 @@ public class RotateTestLayout extends FrameLayout {
             int center = getWidth() / 2;
             canvas.save();
             canvas.translate(center, center);
-            canvas.rotate(degrees / 2);
+//            canvas.rotate(degrees / 2);
             for(int i = 0; i < mAdapter.getCount(); i ++) {
                 canvas.drawLine(0, 0, 0, -center, mBackgroundPaint);
                 canvas.rotate(degrees);
@@ -128,32 +129,32 @@ public class RotateTestLayout extends FrameLayout {
     }
 
     /**
-     * 绘制半圆背景
+     * 绘制半圆背景 绘制背景，几个颜色
      * @param degrees 每次画布旋转角度
      */
     private void drawArcBackground(Canvas canvas, float degrees) {
-        if(canvas != null && mAdapter != null && mAdapter.getCount() > 0) {
-            canvas.save();
-            canvas.translate(mWidth / 2 - mBitmapWidth / 2, mHeight / 2);
-            for(int i = 0; i < mAdapter.getCount(); i ++) {
-                canvas.drawBitmap(bitmap, matrix, mBackgroundPaint);
-                canvas.rotate(degrees,mBitmapWidth / 2,0);
-            }
-            canvas.restore();
-        }
+//        if(canvas != null && mAdapter != null && mAdapter.getCount() > 0) {
+//            canvas.save();
+//            canvas.translate(mWidth / 2 - mBitmapWidth / 2, mHeight / 2);
+//            for(int i = 0; i < mAdapter.getCount(); i ++) {
+//                canvas.drawBitmap(bitmap, matrix, mBackgroundPaint);
+//                canvas.rotate(degrees,mBitmapWidth / 2,0);
+//            }
+//            canvas.restore();
+//        }
     }
 
-    @Override
-    protected void onLayout( boolean changed, int left, int top, int right, int bottom) {
-        super.onLayout(changed, left, top, right, bottom);
-        if(mAdapter == null || getChildCount() != mAdapter.getCount())
-            return ;
-        for(int i = 0; i < mAdapter.getCount(); i ++) {
-            View v = getChildAt(i);
-            setRotation(v, getClildRotation(i));
-        }
-        
-    }
+//    @Override
+//    protected void onLayout( boolean changed, int left, int top, int right, int bottom) {
+//        super.onLayout(changed, left, top, right, bottom);
+//        if(mAdapter == null || getChildCount() != mAdapter.getCount())
+//            return ;
+//        for(int i = 0; i < mAdapter.getCount(); i ++) {
+//            View v = getChildAt(i);
+////            setRotation(v, getClildRotation(i));
+//        }
+//        
+//    }
 
 
     /**
@@ -164,8 +165,8 @@ public class RotateTestLayout extends FrameLayout {
         if(mAdapter == null || mAdapter.getCount() == 0) {
             return 0f;
         }
-        return (float)360 / mAdapter.getCount() * position;
-        
+//        return (float)360 / mAdapter.getCount() * position;
+        return 360 / mAdapter.getCount() * (mAdapter.getCount() - (position + 1)) + 360 / mAdapter.getCount() / 2;
     }
 
     /**
@@ -206,8 +207,15 @@ public class RotateTestLayout extends FrameLayout {
             return ;
         }
         for(int i = 0; i < mAdapter.getCount(); i ++) {
-            View v = mAdapter.getView(i);
+            final View v = mAdapter.getView(i);
+            final int j = i;
             addView(v);
+            v.post(new Runnable() {
+                @Override
+                public void run() {
+                    setRotation(v, getClildRotation(j));
+                }
+            });
         }
         
     }
@@ -217,12 +225,33 @@ public class RotateTestLayout extends FrameLayout {
      * @param v
      * @param rotation
      */
-    private void setRotation(View v, float rotation) {
-        if(v != null) {
-            v.setPivotX(v.getWidth() / 2);
-            v.setPivotY(v.getHeight());
+//    private void setRotation(View v, float rotation) {
+//        if(v != null) {
+//            v.setPivotX(v.getWidth() / 2);
+//            v.setPivotY(v.getHeight());
 //            v.setRotation(rotation);
+//        }
+//    }
+
+    /**
+     * 设置一个View的角度，不带动画
+     * @param v
+     * @param rotate
+     */
+    private void setRotation(final View v, final float rotate) {
+        if(v == null) {
+            Toast.makeText(mContext, "view == null", Toast.LENGTH_SHORT).show();
+            return ;
         }
+        v.post(new Runnable() {
+            @Override
+            public void run() {
+                v.setPivotX(v.getWidth() / 2);
+                v.setPivotY(v.getHeight());
+                v.setRotation(rotate);
+            }
+        });
+
     }
 
     /**
