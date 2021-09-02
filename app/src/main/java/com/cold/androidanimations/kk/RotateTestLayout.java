@@ -249,6 +249,7 @@ public class RotateTestLayout extends FrameLayout {
                 v.setPivotX(v.getWidth() / 2);
                 v.setPivotY(v.getHeight());
                 v.setRotation(rotate);
+                v.setVisibility(View.VISIBLE);
             }
         });
 
