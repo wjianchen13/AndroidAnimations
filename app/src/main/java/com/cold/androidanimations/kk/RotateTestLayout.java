@@ -25,6 +25,11 @@ import com.cold.androidanimations.R;
  * 
  */
 public class RotateTestLayout extends FrameLayout {
+
+    /**
+     * 插入View动画时间
+     */
+    private final int INSERT_TIME = 200;
     
     private static final String TAG = "CustomParamsLayout";
     
@@ -67,6 +72,18 @@ public class RotateTestLayout extends FrameLayout {
     }
 
     /**
+     * 插入数据，其他View调整位置，View从中心移出
+     * 顺序：
+     * 1.已经存在的View调整位置
+     * 2.新加的View从中心弹出
+     * 顺序不能改变，计算方式已经固定了
+     */
+    public void addItem(PanItem item) {
+        adjustView();
+        insertView(item);
+    }
+
+    /**
      * 插入一个View，在Y轴负方向和X轴正方形处
      */
     public void insertView(PanItem item) {
@@ -78,9 +95,8 @@ public class RotateTestLayout extends FrameLayout {
         // 计算插入角度
         int angle = 360 / mAdapter.getCount() / 2;
         addView(v); // RelativeLayout添加子View
-        v.setVisibility(View.INVISIBLE);
+        v.setVisibility(View.INVISIBLE); // 先隐藏，后显示，否则会闪烁
         setRotate(v, angle);
-        
     }
 
     /**
@@ -100,7 +116,7 @@ public class RotateTestLayout extends FrameLayout {
     }
 
     /**
-     * 设置一个View的角度，不带动画
+     * 设置一个View的初始角度，然后从中心处往外移动
      * @param v
      * @param rotate
      */
@@ -173,7 +189,7 @@ public class RotateTestLayout extends FrameLayout {
         ObjectAnimator alpha = ObjectAnimator.ofFloat(v, "alpha", 0f, 1f);
         AnimatorSet animSet = new AnimatorSet();
         animSet.play(translationX).with(translationY).with(alpha);
-        animSet.setDuration(500);
+        animSet.setDuration(INSERT_TIME);
 //        animSet.setStartDelay(50);
         animSet.start();
     }
@@ -192,7 +208,7 @@ public class RotateTestLayout extends FrameLayout {
         v.setPivotX(v.getWidth() / 2);
         v.setPivotY(v.getHeight());
         ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(v, "rotation", from, to);
-        objectAnimator.setDuration(1500);
+        objectAnimator.setDuration(INSERT_TIME);
         objectAnimator.setInterpolator(new LinearInterpolator());
         objectAnimator.start();
     }

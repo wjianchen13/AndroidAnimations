@@ -153,21 +153,7 @@ public class RotateTestActivity extends AppCompatActivity {
         data.add(new PanItem("test99", ""));
         plTest.setAdapter(mAdapter = new TotateTestAdapter(this, data));
     }
-
-    /**
-     * 启动旋转
-     * @param v
-     */
-    public void onStart(View v) {
-        plTest.setPivotX(plTest.getWidth() / 2);
-        plTest.setPivotY(plTest.getHeight() / 2);
-        ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(
-                plTest, "rotation", 0, 720);
-        objectAnimator.setDuration(3000);
-        objectAnimator.setInterpolator(new LinearInterpolator());
-        objectAnimator.start();
-    }
-
+    
     /**
      * 插入View
      * @param v
@@ -183,6 +169,29 @@ public class RotateTestActivity extends AppCompatActivity {
     public void onAdjust(View v) {
 //        mAdapter.set();
         plTest.adjustView();
+    }
+
+    /**
+     * 启动旋转
+     * @param v
+     */
+    public void onStart(View v) {
+        plTest.setPivotX(plTest.getWidth() / 2);
+        plTest.setPivotY(plTest.getHeight() / 2);
+        ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(
+                plTest, "rotation", 0, 720);
+        objectAnimator.setDuration(3000);
+        objectAnimator.setInterpolator(new LinearInterpolator());
+        objectAnimator.start();
+    }
+
+
+    /**
+     * 插入数据
+     * @param v
+     */
+    public void onAdd(View v) {
+        plTest.addItem(new PanItem("add", ""));
     }
 
 

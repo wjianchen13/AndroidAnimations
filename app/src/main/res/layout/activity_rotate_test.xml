@@ -11,19 +11,10 @@
         android:layout_marginTop="10dp" />
 
     <Button
-        android:id="@+id/btn_start"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:text="启动"
-        android:textAllCaps="false"
-        android:onClick="onStart" />
-
-    <Button
         android:id="@+id/insert"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/btn_start"
+        android:layout_alignParentBottom="true"
         android:text="插入View"
         android:textAllCaps="false"
         android:onClick="onInsert" />
@@ -32,17 +23,36 @@
         android:id="@+id/set"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/btn_start"
+        android:layout_alignTop="@id/insert"
         android:layout_toRightOf="@id/insert"
         android:text="调整存在的view位置"
         android:textAllCaps="false"
         android:onClick="onAdjust" />
 
     <Button
+        android:id="@+id/btn_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/insert"
+        android:layout_toRightOf="@id/set"
+        android:text="插入数据"
+        android:textAllCaps="false"
+        android:onClick="onAdd" />
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/insert"
+        android:text="启动"
+        android:textAllCaps="false"
+        android:onClick="onStart" />
+
+    <Button
         android:id="@+id/btn_add2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/set"
+        android:layout_above="@id/btn_start"
         android:text="添加2个"
         android:textAllCaps="false"
         android:onClick="onAdd2" />
