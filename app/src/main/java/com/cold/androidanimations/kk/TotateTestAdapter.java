@@ -13,9 +13,10 @@ import android.widget.TextView;
 import com.cold.androidanimations.R;
 import com.cold.androidanimations.glide.GlideApp;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class TotateTestAdapter implements Adapter {
+public class TotateTestAdapter implements TestAdapter {
     
     View V3 = null;
 
@@ -69,7 +70,15 @@ public class TotateTestAdapter implements Adapter {
         }
         return null;
     }
-    
+
+    @Override
+    public View insertItem(PanItem item) {
+        if(mData == null)
+            mData = new ArrayList<>();
+        mData.add(item);
+        return getView(mData.size() - 1);
+    }
+
     public void set() {
         if(V3 != null) {
             V3.findViewById(R.id.imgv_test).setBackgroundResource(R.drawable.ic_test);

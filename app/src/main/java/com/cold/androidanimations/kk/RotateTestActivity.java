@@ -169,11 +169,20 @@ public class RotateTestActivity extends AppCompatActivity {
     }
 
     /**
-     * 启动旋转
+     * 插入View
      * @param v
      */
-    public void onSet(View v) {
-        mAdapter.set();
+    public void onInsert(View v) {
+        plTest.insertView(new PanItem("insert", ""));
+    }
+
+    /**
+     * 调整已经存在的View的位置
+     * @param v
+     */
+    public void onAdjust(View v) {
+//        mAdapter.set();
+        plTest.adjustView();
     }
 
 
