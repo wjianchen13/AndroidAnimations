@@ -2,7 +2,6 @@ package com.cold.androidanimations;
 
 import android.content.Intent;
 import android.os.Bundle;
-
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,11 +11,20 @@ import com.cold.androidanimations.fans.LeonidsActivity;
 import com.cold.androidanimations.frame.FrameActivity;
 import com.cold.androidanimations.kk.RotateActivity;
 import com.cold.androidanimations.kk.RotateTestActivity;
+import com.cold.androidanimations.other.OtherActivity;
 import com.cold.androidanimations.pan.PanActivity;
 import com.cold.androidanimations.property.PropertyActivity;
 import com.cold.androidanimations.radar.RadarActivity;
 import com.cold.androidanimations.tween.TweenActivity;
 
+/**
+ * anim和animator区别
+ * anim文件夹下存放tween animation（补间动画）和frame animation（逐帧动画）
+ * animator文件夹下存放property animation（属性动画）
+ * xml文件里有animator、objectAnimator、set三个标签
+ * 在代码中使用AnimatorInflater.loadAnimator（）方法加载动画
+ * 使用Animator.setTarget（View）为View控件加载动画，使用Animator.start（）开启动画
+ */
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -132,6 +140,17 @@ public class MainActivity extends AppCompatActivity {
     public void onRotateTest(View v) {
         Intent it = new Intent();
         it.setClass(MainActivity.this, RotateTestActivity.class);
+        startActivity(it);
+    }
+
+    /**
+     * 其他
+     * @param
+     * @return
+     */
+    public void onOther(View v) {
+        Intent it = new Intent();
+        it.setClass(MainActivity.this, OtherActivity.class);
         startActivity(it);
     }
 }

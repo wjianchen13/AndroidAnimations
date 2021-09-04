@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    
+    <Button
+        android:id="@+id/btn_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Switch Text"
+        android:textAllCaps="false"
+        android:onClick="onSwitch" />
+    
+    <Button
+        android:id="@+id/btn_expand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="展开子View动画"
+        android:textAllCaps="false"
+        android:onClick="onExpand" />
+
+    <Button
+        android:id="@+id/btn_expand_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="展开子View动画布局测试"
+        android:textAllCaps="false"
+        android:onClick="onExpandTest" />
+
+</LinearLayout>
+

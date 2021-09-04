@@ -43,6 +43,10 @@
         <activity android:name="com.cold.androidanimations.pan.PanActivity"/>
         <activity android:name="com.cold.androidanimations.kk.RotateActivity"/>
         <activity android:name="com.cold.androidanimations.kk.RotateTestActivity"/>
+        <activity android:name="com.cold.androidanimations.other.OtherActivity"/>
+        <activity android:name="com.cold.androidanimations.other.SwitchTextActivity"/>
+        <activity android:name="com.cold.androidanimations.other.ExpandViewActivity"/>
+        <activity android:name="com.cold.androidanimations.other.ExpandViewTestActivity"/>
         
     </application>
 

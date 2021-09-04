@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.cold.androidanimations.other.TextSwitchView
+        android:id="@+id/tsv_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="#ff00ff00"
+        android:layout_marginTop="10dp" />
+
+    <ImageView
+        android:id="@+id/imgv_test"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/tsv_test"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/ic_fans_group_anim"
+        android:layout_marginTop="20dp" />
+    
+    <Button
+        android:id="@+id/btn_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="test"
+        android:textAllCaps="false"
+        android:onClick="onTest" />
+    
+    <Button
+        android:id="@+id/btn_set"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/btn_test"
+        android:layout_toRightOf="@id/btn_test"
+        android:text="set"
+        android:textAllCaps="false"
+        android:onClick="onSet" />
+
+    <Button
+        android:id="@+id/btn_scale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/btn_set"
+        android:layout_toRightOf="@id/btn_set"
+        android:text="scale"
+        android:textAllCaps="false"
+        android:onClick="onScale" />
+
+</RelativeLayout>
+

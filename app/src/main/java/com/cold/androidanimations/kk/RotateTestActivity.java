@@ -179,7 +179,7 @@ public class RotateTestActivity extends AppCompatActivity {
         plTest.setPivotX(plTest.getWidth() / 2);
         plTest.setPivotY(plTest.getHeight() / 2);
         ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(
-                plTest, "rotation", 0, 720);
+                plTest, "rotation", 0, 90);
         objectAnimator.setDuration(3000);
         objectAnimator.setInterpolator(new LinearInterpolator());
         objectAnimator.start();
