@@ -29,6 +29,30 @@ public class RotateTestActivity extends AppCompatActivity {
     }
 
     /**
+     * 删除测试
+     * @param v
+     */
+    public void onDelete1(View v) {
+        plTest.deleteItem(4);
+    }
+
+    /**
+     * 删除测试
+     * @param v
+     */
+    public void onDelete2(View v) {
+
+    }
+
+    /**
+     * 删除测试
+     * @param v
+     */
+    public void onDelete3(View v) {
+
+    }
+
+    /**
      * 旋转动画
      * @param v
      */
@@ -180,7 +204,7 @@ public class RotateTestActivity extends AppCompatActivity {
         plTest.setPivotY(plTest.getHeight() / 2);
         ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(
                 plTest, "rotation", 0, 90);
-        objectAnimator.setDuration(3000);
+        objectAnimator.setDuration(1000);
         objectAnimator.setInterpolator(new LinearInterpolator());
         objectAnimator.start();
     }

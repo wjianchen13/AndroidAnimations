@@ -84,5 +84,9 @@ public class TotateTestAdapter implements TestAdapter {
             V3.findViewById(R.id.imgv_test).setBackgroundResource(R.drawable.ic_test);
         }
     }
-    
+
+    @Override
+    public void deleteItem(int index) {
+        
+    }
 }

@@ -95,16 +95,45 @@ public class RotateTestLayout extends FrameLayout {
         // 计算插入角度
         int angle = 360 / mAdapter.getCount() / 2;
         addView(v); // RelativeLayout添加子View
+        System.out.println("====================> count: " + getChildCount());
         v.setVisibility(View.INVISIBLE); // 先隐藏，后显示，否则会闪烁
         setRotate(v, angle);
     }
 
     /**
+     * index 从0开始
+     * @param index
+     */
+    public void deleteItem(int index) {
+        int count = getChildCount();
+        if(index > count - 1) {
+            Toast.makeText(mContext, "无效index", Toast.LENGTH_SHORT).show();
+            return ;
+        }
+        removeViewAt(index);
+        System.out.println("====================> count: " + getChildCount());
+        if(mAdapter != null)
+            mAdapter.deleteItem(index);
+        
+    }
+
+    /**
+     * 移除View之后，获取剩余View最后的角度
+     * 然后从当前角度 getRotation()移动到最后角度
+     */
+    private float getFinalRotate(int index) {
+        int count = getChildCount();
+        float rotate = 360.0f / count;
+        return (rotate / 2) * (2 * index + 1);
+        
+    }
+    
+    /**
      * 插入View的时候，需要调整已经存在的View的角度
      */
     public void adjustView() {
         int count = getChildCount();
-        for(int i = 0; i < count; i ++) {
+         for(int i = 0; i < count; i ++) {
             System.out.println("==================> view " + i + " rotate: " + getChildAt(i).getRotation() 
                     + "   rotateX: " + getChildAt(i).getRotationX() + "   rotateY: " + getChildAt(i).getRotationY());
         }

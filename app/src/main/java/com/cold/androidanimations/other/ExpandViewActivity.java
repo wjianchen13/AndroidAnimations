@@ -22,12 +22,12 @@ public class ExpandViewActivity extends AppCompatActivity {
     /**
      * 动画正常执行时间
      */
-    private static final int duration = 300;
+    private static final int duration = 200;
 
     /**
      * 从放到最大缩小到原来大小时间
      */
-    private static final int duration1 = 100;
+    private static final int duration1 = 80;
     
     private RelativeLayout rlytExpand;
 
@@ -340,8 +340,8 @@ public class ExpandViewActivity extends AppCompatActivity {
             @Override
             public void run() {
                 // 相对当前坐标偏移
-                ObjectAnimator animator = ObjectAnimator.ofFloat(v, "translationX", xFrom, xTo + 20).setDuration(duration);
-                ObjectAnimator animator1 = ObjectAnimator.ofFloat(v, "translationX", xTo + 20, xTo).setDuration(duration1);
+                ObjectAnimator animator = ObjectAnimator.ofFloat(v, "translationX", xFrom, xTo + 50).setDuration(duration);
+                ObjectAnimator animator1 = ObjectAnimator.ofFloat(v, "translationX", xTo + 50, xTo).setDuration(duration1);
                 AnimatorSet animSet = new AnimatorSet();
 //                animSet.play(animator);
                 animSet.play(animator1).after(animator);

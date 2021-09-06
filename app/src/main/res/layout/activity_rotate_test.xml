@@ -49,6 +49,26 @@
         android:onClick="onStart" />
 
     <Button
+        android:id="@+id/btn_add10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/btn_start"
+        android:layout_toRightOf="@id/btn_start"
+        android:text="添加1个"
+        android:textAllCaps="false"
+        android:onClick="onAdd10" />
+
+    <Button
+        android:id="@+id/btn_add11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/btn_add10"
+        android:layout_toRightOf="@id/btn_add10"
+        android:text="旋转动画"
+        android:textAllCaps="false"
+        android:onClick="onAdd11" />
+
+    <Button
         android:id="@+id/btn_add2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -129,23 +149,33 @@
         android:onClick="onAdd9" />
 
     <Button
-        android:id="@+id/btn_add10"
+        android:id="@+id/btn_delete1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@id/btn_add6"
-        android:text="添加1个"
+        android:text="删除1"
         android:textAllCaps="false"
-        android:onClick="onAdd10" />
+        android:onClick="onDelete1" />
 
     <Button
-        android:id="@+id/btn_add11"
+        android:id="@+id/btn_delete2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@id/btn_add10"
-        android:layout_toRightOf="@id/btn_add10"
-        android:text="旋转动画"
+        android:layout_alignTop="@id/btn_delete1"
+        android:layout_toRightOf="@id/btn_delete1"
+        android:text="删除2"
         android:textAllCaps="false"
-        android:onClick="onAdd11" />
+        android:onClick="onDelete2" />
+
+    <Button
+        android:id="@+id/btn_delete3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/btn_delete2"
+        android:layout_toRightOf="@id/btn_delete2"
+        android:text="删除3"
+        android:textAllCaps="false"
+        android:onClick="onDelete3" />
 
 </RelativeLayout>
 

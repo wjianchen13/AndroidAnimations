@@ -9,4 +9,5 @@ public interface TestAdapter {
     long getItemId(int position);
     View getView(int position);
     View insertItem(PanItem item);
+    void deleteItem(int index);
 }
