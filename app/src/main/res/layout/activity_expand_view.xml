@@ -139,10 +139,30 @@
         android:onClick="onAdd4" />
 
     <Button
-        android:id="@+id/btn_add7"
+        android:id="@+id/btn_add5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@id/btn_add2"
+        android:text="add5"
+        android:textAllCaps="false"
+        android:onClick="onAdd5" />
+
+    <Button
+        android:id="@+id/btn_add6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/btn_add5"
+        android:layout_toRightOf="@id/btn_add5"
+        android:text="add6"
+        android:textAllCaps="false"
+        android:onClick="onAdd6" />
+
+    <Button
+        android:id="@+id/btn_add7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/btn_add6"
+        android:layout_toRightOf="@id/btn_add6"
         android:text="add7"
         android:textAllCaps="false"
         android:onClick="onAdd7" />
@@ -151,8 +171,7 @@
         android:id="@+id/btn_add8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@id/btn_add7"
-        android:layout_toRightOf="@id/btn_add7"
+        android:layout_above="@id/btn_add5"
         android:text="add8"
         android:textAllCaps="false"
         android:onClick="onAdd8" />

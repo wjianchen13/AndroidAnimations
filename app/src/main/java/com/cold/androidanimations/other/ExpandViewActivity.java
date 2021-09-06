@@ -18,8 +18,16 @@ import com.cold.androidanimations.R;
 import com.cold.androidanimations.kk.Utils;
 
 public class ExpandViewActivity extends AppCompatActivity {
-    
-    private static final int duration = 2000;
+
+    /**
+     * 动画正常执行时间
+     */
+    private static final int duration = 300;
+
+    /**
+     * 从放到最大缩小到原来大小时间
+     */
+    private static final int duration1 = 100;
     
     private RelativeLayout rlytExpand;
 
@@ -150,22 +158,7 @@ public class ExpandViewActivity extends AppCompatActivity {
      * @param v
      */
     public void onAdd2(View v) {
-        rlytExpand.removeAllViews();
-        count = 2; // 只有2个人的情况
-        for(int i = 0; i < count; i ++) {
-            View view = addView(count, i);
-//            view.setVisibility(View.VISIBLE);
-        }
-        for(int i = 0; i < count; i ++) {
-            View child = rlytExpand.getChildAt(count - 1 - i);
-            if(i == 0) {
-                scaleView(child);
-            } else {
-                transView(child, -(margin * (2 * i) + itemWidth * i), 0);
-            }
-        }
-        
-        
+        insertView(2);
     }
 
     /**
@@ -173,16 +166,7 @@ public class ExpandViewActivity extends AppCompatActivity {
      * @param v
      */
     public void onAdd3(View v) {
-        ExpandItemView item = new ExpandItemView(this);
-        RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
-        lp.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);//与父容器的上侧对齐
-        lp.addRule(RelativeLayout.CENTER_VERTICAL);
-        lp.rightMargin = (int)((sWidth - (itemWidth + 2 * margin) * count) / 2);
-        item.setBackgroundColor(Color.argb(100, 0, 0, 255));
-
-        item.setId(R.id.id_test);//设置这个View 的id
-        item.setLayoutParams(lp); // 设置布局参数
-        rlytExpand.addView(item); // RelativeLayout添加子View
+        insertView(3);
     }
 
     /**
@@ -190,50 +174,67 @@ public class ExpandViewActivity extends AppCompatActivity {
      * @param v
      */
     public void onAdd4(View v) {
-        ExpandItemView item = new ExpandItemView(this);
-        RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
-        lp.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);//与父容器的上侧对齐
-        lp.addRule(RelativeLayout.CENTER_VERTICAL);
-        lp.rightMargin = (int)((sWidth - (itemWidth + 2 * margin) * count) / 2);
-        item.setBackgroundColor(Color.argb(100, 0, 0, 255));
-
-        item.setId(R.id.id_test);//设置这个View 的id
-        item.setLayoutParams(lp); // 设置布局参数
-        rlytExpand.addView(item); // RelativeLayout添加子View
+        insertView(4);
     }
 
     /**
-     * 第一个item缩放控制
+     * 添加5个item
+     * @param v
+     */
+    public void onAdd5(View v) {
+        insertView(5);
+    }
+
+    /**
+     * 添加6个item
+     * @param v
+     */
+    public void onAdd6(View v) {
+        insertView(6);
+    }
+
+    /**
+     * 添加7个item
      * @param v
      */
     public void onAdd7(View v) {
-        ExpandItemView item = new ExpandItemView(this);
-        RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
-        lp.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);//与父容器的上侧对齐
-        lp.addRule(RelativeLayout.CENTER_VERTICAL);
-        lp.rightMargin = (int)((sWidth - (itemWidth + 2 * margin) * count) / 2);
-        item.setBackgroundColor(Color.argb(100, 0, 0, 255));
-
-        item.setId(R.id.id_test);//设置这个View 的id
-        item.setLayoutParams(lp); // 设置布局参数
-        rlytExpand.addView(item); // RelativeLayout添加子View
+        insertView(7);
     }
 
     /**
-     * 第一个item缩放控制
+     * 添加8个item
      * @param v
      */
     public void onAdd8(View v) {
-        ExpandItemView item = new ExpandItemView(this);
-        RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
-        lp.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);//与父容器的上侧对齐
-        lp.addRule(RelativeLayout.CENTER_VERTICAL);
-        lp.rightMargin = (int)((sWidth - (itemWidth + 2 * margin) * count) / 2);
-        item.setBackgroundColor(Color.argb(100, 0, 0, 255));
+        insertView(8);
+    }
+    
+    private void insertView(final int count) {
+        rlytExpand.removeAllViews();
+        for(int i = 0; i < count; i ++) {
+            addView(count, i);
+        }
+        if(count >= 1) {
+            View child = rlytExpand.getChildAt(count - 1); // 因为排列在第一个的View在最上层，所以要从最后开始
+            scaleView(child, new AnimatorListenerAdapter() {
+                @Override
+                public void onAnimationEnd(Animator animation) {
+                    super.onAnimationEnd(animation);
+                    transOtherView(count);
+                }
+            });
+        }
+    }
 
-        item.setId(R.id.id_test);//设置这个View 的id
-        item.setLayoutParams(lp); // 设置布局参数
-        rlytExpand.addView(item); // RelativeLayout添加子View
+    /**
+     * 移动除了最上层的View
+     */
+    private void transOtherView(int count) {
+        for(int i = count - 2; i >= 0; i --) {
+            View child = rlytExpand.getChildAt(i);
+            int times = count - 1 - i; // 从最上层倒数第二个开始，倒数第一个是缩放
+            transView(child, -(margin * (2 * times) + itemWidth * times), 0);
+        }
     }
 
     /**
@@ -263,40 +264,6 @@ public class ExpandViewActivity extends AppCompatActivity {
     }
 
     /**
-     * 第一个item缩放控制
-     * @param view
-     */
-    public void scaleView(final View view) {
-        if(view == null) {
-            Toast.makeText(ExpandViewActivity.this, "view == null", Toast.LENGTH_SHORT).show();
-            return ;
-        }
-        view.post(new Runnable() {
-            @Override
-            public void run() {
-                ObjectAnimator scaleX = ObjectAnimator.ofFloat(view, "scaleX", 0.6f, 1.2f, 1f).setDuration(duration / 5);
-                ObjectAnimator scaleY = ObjectAnimator.ofFloat(view, "scaleY", 0.6f, 1.2f, 1f).setDuration(duration / 5);
-                ObjectAnimator alpha1 = ObjectAnimator.ofFloat(view, "alpha", 0.0f, 1f).setDuration(duration / 5);
-
-                AnimatorSet animSet = new AnimatorSet();
-
-                animSet.play(scaleX).with(scaleY).with(alpha1);
-                animSet.addListener(new AnimatorListenerAdapter() {
-                    @Override
-                    public void onAnimationEnd(Animator animation) {
-                        super.onAnimationEnd(animation);
-                        Toast.makeText(ExpandViewActivity.this, "end animation", Toast.LENGTH_SHORT).show();
-
-                    }
-                });
-                view.setVisibility(View.VISIBLE);
-                animSet.start();
-            }
-        });
-
-    }
-
-    /**
      * 其他item位移 + 反弹
      * @param v
      */
@@ -321,6 +288,48 @@ public class ExpandViewActivity extends AppCompatActivity {
             transView(rlytExpand.getChildAt(i), -(margin * (2 * i) + width * i), 0);
         }
     }
+
+    /**
+     * 第一个item缩放控制
+     * @param view
+     */
+    public void scaleView(final View view, final AnimatorListenerAdapter adapter) {
+        if(view == null) {
+            Toast.makeText(ExpandViewActivity.this, "view == null", Toast.LENGTH_SHORT).show();
+            return ;
+        }
+        view.post(new Runnable() {
+            @Override
+            public void run() {
+                ObjectAnimator scaleX1 = ObjectAnimator.ofFloat(view, "scaleX", 0.6f, 1.2f).setDuration(duration);
+                ObjectAnimator scaleY1 = ObjectAnimator.ofFloat(view, "scaleY", 0.6f, 1.2f).setDuration(duration);
+
+                ObjectAnimator scaleX2 = ObjectAnimator.ofFloat(view, "scaleX", 1.2f, 1f).setDuration(duration1);
+                ObjectAnimator scaleY2 = ObjectAnimator.ofFloat(view, "scaleY", 1.2f, 1f).setDuration(duration1);
+
+                ObjectAnimator alpha1 = ObjectAnimator.ofFloat(view, "alpha", 0.0f, 1f).setDuration(duration);
+
+                AnimatorSet animSet = new AnimatorSet();
+
+                animSet.play(scaleX1).with(scaleY1).with(alpha1);
+                animSet.play(scaleX2).with(scaleY2).after(scaleY1);
+
+                scaleY1.addListener(new AnimatorListenerAdapter() {
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        super.onAnimationEnd(animation);
+                        if(adapter != null)
+                            adapter.onAnimationEnd(animation);
+                        Toast.makeText(ExpandViewActivity.this, "end animation", Toast.LENGTH_SHORT).show();
+
+                    }
+                });
+                view.setVisibility(View.VISIBLE);
+                animSet.start();
+            }
+        });
+
+    }
     
     private void transView(final View v, final float xFrom, final float xTo) {
         if(v == null) {
@@ -331,12 +340,15 @@ public class ExpandViewActivity extends AppCompatActivity {
             @Override
             public void run() {
                 // 相对当前坐标偏移
-                ObjectAnimator animator = ObjectAnimator.ofFloat(v, "translationX", xFrom, xTo + 20, xTo);
+                ObjectAnimator animator = ObjectAnimator.ofFloat(v, "translationX", xFrom, xTo + 20).setDuration(duration);
+                ObjectAnimator animator1 = ObjectAnimator.ofFloat(v, "translationX", xTo + 20, xTo).setDuration(duration1);
+                AnimatorSet animSet = new AnimatorSet();
+//                animSet.play(animator);
+                animSet.play(animator1).after(animator);
                 animator.setInterpolator(new LinearInterpolator());
-                animator.setStartDelay(duration / 10);
-                animator.setDuration(300);
+//                animator.setDuration(duration);
                 v.setVisibility(View.VISIBLE);
-                animator.start();
+                animSet.start();
             }
         });
 
