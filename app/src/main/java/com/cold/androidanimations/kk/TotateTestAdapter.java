@@ -87,6 +87,8 @@ public class TotateTestAdapter implements TestAdapter {
 
     @Override
     public void deleteItem(int index) {
-        
+        if(mData != null && index < mData.size()) {
+            mData.remove(index);
+        }
     }
 }

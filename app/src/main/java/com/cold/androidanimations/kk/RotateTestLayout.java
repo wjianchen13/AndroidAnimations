@@ -11,9 +11,7 @@ import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.Point;
 import android.util.AttributeSet;
-import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.animation.LinearInterpolator;
 import android.widget.FrameLayout;
 import android.widget.Toast;
@@ -79,8 +77,8 @@ public class RotateTestLayout extends FrameLayout {
      * 顺序不能改变，计算方式已经固定了
      */
     public void addItem(PanItem item) {
-        adjustView();
         insertView(item);
+        addAdjustView();
     }
 
     /**
@@ -114,6 +112,7 @@ public class RotateTestLayout extends FrameLayout {
         System.out.println("====================> count: " + getChildCount());
         if(mAdapter != null)
             mAdapter.deleteItem(index);
+        deleteAdjustView();
         
     }
 
@@ -122,10 +121,37 @@ public class RotateTestLayout extends FrameLayout {
      * 然后从当前角度 getRotation()移动到最后角度
      */
     private float getFinalRotate(int index) {
-        int count = getChildCount();
-        float rotate = 360.0f / count;
-        return (rotate / 2) * (2 * index + 1);
+        int childCount = getChildCount();
+        float rotate = 360.0f / childCount; // 每个Item占的角度
+
+        float rotate1 = rotate * (childCount - (index + 1)) + rotate / 2; 
         
+        return rotate1;
+        
+    }
+
+    /**
+     * 插入View的时候，需要调整已经存在的View的角度
+     */
+    public void addAdjustView() {
+        int count = getChildCount();
+        for(int i = 0; i < count - 1; i ++ ) { // 最新加入那个View可以不用调整角度了
+            float finalRotate = getFinalRotate(i); // 因为先加入了一个，只需要处理前面的count - 1个item
+            System.out.println("============> rotate " + i + " : " + getChildAt(i).getRotation() + "  final rotate: " + finalRotate);
+            setRotateWithAnim(getChildAt(i), getChildAt(i).getRotation(), finalRotate);
+        }
+    }
+
+    /**
+     * 删除View的时候，需要调整已经存在的View的角度
+     */
+    public void deleteAdjustView() {
+        int count = getChildCount();
+        for(int i = 0; i < count; i ++ ) { // 全部角度调整
+            float finalRotate = getFinalRotate(i); // 因为先加入了一个，只需要处理前面的count - 1个item
+            System.out.println("============> rotate " + i + " : " + getChildAt(i).getRotation() + "  final rotate: " + finalRotate);
+            setRotateWithAnim(getChildAt(i), getChildAt(i).getRotation(), finalRotate);
+        }
     }
     
     /**
