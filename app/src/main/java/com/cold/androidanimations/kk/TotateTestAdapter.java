@@ -51,7 +51,7 @@ public class TotateTestAdapter implements TestAdapter {
     @Override
     public View getView(int position) {
         if(mContext != null) {
-            RelativeLayout view = (RelativeLayout) LayoutInflater.from(mContext).inflate(R.layout.item_pan, null);
+            RelativeLayout view = (RelativeLayout) LayoutInflater.from(mContext).inflate(R.layout.item_pan_test, null);
 //            PanLayoutParams lp = new PanLayoutParams(Utils.dip2px(mContext, 60), Utils.dip2px(mContext, 150));
 //            lp.position = PanLayoutParams.POSITION_CENTERHORIZONTAL;
 //            view.setLayoutParams(lp);

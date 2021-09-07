@@ -10,6 +10,7 @@ import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.Point;
+import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.LinearInterpolator;
@@ -219,7 +220,7 @@ public class RotateTestLayout extends FrameLayout {
      * @return
      */
     private double convertAngle(float angle) {
-        if(angle > 0  && angle < 90) { // 插入的时候都在右上方，所以角度都在这个范围
+        if(angle > 0 && angle < 90) { // 插入的时候都在右上方，所以角度都在这个范围
             return 90 - angle;
         }
         return angle;
@@ -241,7 +242,7 @@ public class RotateTestLayout extends FrameLayout {
         }
         ObjectAnimator translationX = ObjectAnimator.ofFloat(v, "translationX", xFrom, xTo);
         ObjectAnimator translationY = ObjectAnimator.ofFloat(v, "translationY", yFrom, yTo);
-        ObjectAnimator alpha = ObjectAnimator.ofFloat(v, "alpha", 0f, 1f);
+        ObjectAnimator alpha = ObjectAnimator.ofFloat(v, "alpha", 0f, 0.1f, 1f);
         AnimatorSet animSet = new AnimatorSet();
         animSet.play(translationX).with(translationY).with(alpha);
         animSet.setDuration(INSERT_TIME);
@@ -298,6 +299,7 @@ public class RotateTestLayout extends FrameLayout {
     @Override
     protected void dispatchDraw(Canvas canvas) {
         drawBackground(canvas);
+        drawArcs(canvas, -90.0f, mAdapter != null &&  mAdapter.getCount() > 0 ? (float)360 / mAdapter.getCount() : 1);
         drawLines(canvas, mAdapter != null && mAdapter.getCount() > 0 ? (float)360 / mAdapter.getCount() : 1);
         drawArcBackground(canvas, mAdapter != null && mAdapter.getCount() > 0 ? (float)360 / mAdapter.getCount() : 1);
         super.dispatchDraw(canvas);
@@ -331,6 +333,39 @@ public class RotateTestLayout extends FrameLayout {
                 canvas.rotate(degrees);
             }
             canvas.restore();
+        }
+    }
+    
+    /**
+     * 绘制圆弧的颜色
+     */
+    private int[] mColor = new int[]{Color.GREEN, Color.YELLOW, Color.RED};
+
+    /**
+     * 绘制圆弧的区域
+     */
+    private RectF mRectF = new RectF();
+    
+    /**
+     * 绘制圆弧
+     * @param startAngle 起始角度
+     * @param sweepAngle 扫过角度
+     */
+    private void drawArcs(Canvas canvas, float startAngle, float sweepAngle) {
+        initLinesPaint();
+        mRectF.left = 0;
+        mRectF.top = 0;
+        mRectF.right = getWidth();
+        mRectF.bottom = getHeight();
+        float sAngle = -90.0f; // 开始角度,以Y周负方向为准
+        if(canvas != null && mAdapter != null && mAdapter.getCount() > 0) {
+            // 因为转盘第一个插入的view在父布局最底层，需要和数组开始颜色值对应
+            // 先绘制的圆弧是对应最后插入的那个item
+            for(int i = mAdapter.getCount() - 1; i >= 0; i --) { 
+                mPaint.setColor(mColor[i % mColor.length]);
+                canvas.drawArc(mRectF, sAngle, sweepAngle,true, mPaint);
+                sAngle += sweepAngle;
+            }
         }
     }
 
