@@ -69,6 +69,16 @@
         android:onClick="onAdd11" />
 
     <Button
+        android:id="@+id/btn_delete1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/btn_add11"
+        android:layout_toRightOf="@id/btn_add11"
+        android:text="删除1"
+        android:textAllCaps="false"
+        android:onClick="onDelete1" />
+
+    <Button
         android:id="@+id/btn_add2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -149,33 +159,83 @@
         android:onClick="onAdd9" />
 
     <Button
-        android:id="@+id/btn_delete1"
+        android:id="@+id/btn_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@id/btn_add6"
-        android:text="删除1"
+        android:text="开1"
         android:textAllCaps="false"
-        android:onClick="onDelete1" />
+        android:onClick="onOpen1" />
 
     <Button
-        android:id="@+id/btn_delete2"
+        android:id="@+id/btn_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@id/btn_delete1"
-        android:layout_toRightOf="@id/btn_delete1"
-        android:text="删除2"
+        android:layout_alignTop="@id/btn_1"
+        android:layout_toRightOf="@id/btn_1"
+        android:text="开2"
         android:textAllCaps="false"
-        android:onClick="onDelete2" />
+        android:onClick="onOpen2" />
 
     <Button
-        android:id="@+id/btn_delete3"
+        android:id="@+id/btn_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@id/btn_delete2"
-        android:layout_toRightOf="@id/btn_delete2"
-        android:text="删除3"
+        android:layout_alignTop="@id/btn_2"
+        android:layout_toRightOf="@id/btn_2"
+        android:text="开3"
         android:textAllCaps="false"
-        android:onClick="onDelete3" />
+        android:onClick="onOpen3" />
+
+    <Button
+        android:id="@+id/btn_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/btn_3"
+        android:layout_toRightOf="@id/btn_3"
+        android:text="开4"
+        android:textAllCaps="false"
+        android:onClick="onOpen4" />
+
+    <Button
+        android:id="@+id/btn_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_1"
+        android:text="开5"
+        android:textAllCaps="false"
+        android:onClick="onOpen5" />
+
+    <Button
+        android:id="@+id/btn_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/btn_5"
+        android:layout_toRightOf="@id/btn_5"
+        android:text="开6"
+        android:textAllCaps="false"
+        android:onClick="onOpen6" />
+
+    <Button
+        android:id="@+id/btn_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/btn_6"
+        android:layout_toRightOf="@id/btn_6"
+        android:text="开7"
+        android:textAllCaps="false"
+        android:onClick="onOpen7" />
+
+    <Button
+        android:id="@+id/btn_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/btn_7"
+        android:layout_toRightOf="@id/btn_7"
+        android:text="开8"
+        android:textAllCaps="false"
+        android:onClick="onOpen8" />
+
 
 </RelativeLayout>
 

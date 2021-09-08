@@ -13,6 +13,7 @@ import android.graphics.Point;
 import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.view.View;
+import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.LinearInterpolator;
 import android.widget.FrameLayout;
 import android.widget.Toast;
@@ -68,6 +69,36 @@ public class RotateTestLayout extends FrameLayout {
         this.mContext = context;
         initBackgroundPaint();
         init();
+    }
+
+    /**
+     * 开奖测试
+     * @param index 从0开始，表示开第几个item
+     */
+    public void open(int index) {
+        if(getChildCount() <= index) {
+            Toast.makeText(mContext, "getChildCount() <= index", Toast.LENGTH_SHORT).show();
+            return ;
+        }
+        for(int i = 0; i < getChildCount(); i ++)
+            System.out.println("====================> rotate: " + getOpenRotate(i));
+        setPivotX(getWidth() / 2);
+        setPivotY(getHeight() / 2);
+        float rotate = getOpenRotate(index) + 3 * 360;
+        ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(this, "rotation", 0, rotate);
+        objectAnimator.setDuration(2000);
+        objectAnimator.setInterpolator(new AccelerateDecelerateInterpolator());
+        objectAnimator.start();
+    }
+
+    /**
+     * 获取开奖的角度
+     * @return
+     */
+    private float getOpenRotate(int index) {
+        float finalRotate = getFinalRotate(index);
+        float rotate = 360 - finalRotate; // 表示需要旋转多少度就可以在指定的位置
+        return rotate;
     }
 
     /**

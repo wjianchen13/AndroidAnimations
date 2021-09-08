@@ -2,17 +2,20 @@ package com.cold.androidanimations.kk;
 
 import android.animation.ObjectAnimator;
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.LinearInterpolator;
 
+import androidx.annotation.ColorInt;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.cold.androidanimations.R;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class RotateTestActivity extends AppCompatActivity {
 
@@ -29,6 +32,81 @@ public class RotateTestActivity extends AppCompatActivity {
     }
 
     /**
+     * 开奖测试
+     * @param v
+     */
+    public void onOpen1(View v) {
+        plTest.open(0);
+    }
+
+    /**
+     * 开奖测试
+     * @param v
+     */
+    public void onOpen2(View v) {
+//        int start = 5;
+//        int end = 8;
+//        Random random = new Random();
+//        int a = random.nextInt(end - start) + start;
+//        for(int i = 0; i < 20; i ++)
+//            System.out.println("==============> a" + i + " : " + (random.nextInt(end - start) + start));
+        plTest.open(1);
+    }
+
+    /**
+     * 开奖测试
+     * @param v
+     */
+    public void onOpen3(View v) {
+        plTest.open(2);
+    }
+
+
+    /**
+     * 开奖测试
+     * @param v
+     */
+    public void onOpen4(View v) {
+        plTest.open(3);
+    }
+
+
+    /**
+     * 开奖测试
+     * @param v
+     */
+    public void onOpen5(View v) {
+        plTest.open(4);
+    }
+
+
+    /**
+     * 开奖测试
+     * @param v
+     */
+    public void onOpen6(View v) {
+        plTest.open(5);
+    }
+
+
+    /**
+     * 开奖测试
+     * @param v
+     */
+    public void onOpen7(View v) {
+        plTest.open(6);
+    }
+
+
+    /**
+     * 开奖测试
+     * @param v
+     */
+    public void onOpen8(View v) {
+        plTest.open(7);
+    }
+
+    /**
      * 删除测试
      * @param v
      */
@@ -36,22 +114,7 @@ public class RotateTestActivity extends AppCompatActivity {
         plTest.deleteItem(4);
     }
 
-    /**
-     * 删除测试
-     * @param v
-     */
-    public void onDelete2(View v) {
-
-    }
-
-    /**
-     * 删除测试
-     * @param v
-     */
-    public void onDelete3(View v) {
-
-    }
-
+    
     /**
      * 旋转动画
      * @param v
