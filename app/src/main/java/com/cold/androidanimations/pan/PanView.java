@@ -44,7 +44,7 @@ public class PanView extends FrameLayout {
     private void initView(AttributeSet attrs) {
 //        LayoutInflater.from(getContext()).inflate(R.layout.item_pan, this, true);
         getAttrs(attrs);
-        addItemView();
+//        addItemView();
 
 
         
@@ -63,20 +63,22 @@ public class PanView extends FrameLayout {
      * 动态添加布局
      * 显示在中间位置区域
      */
-    private void addItemView() {
+    public void addItemView() {
         FrameLayout.LayoutParams headParams = new FrameLayout.LayoutParams(dip2px(getContext(),60), dip2px(getContext(),150));
-        View headGroupView = LayoutInflater.from(getContext()).inflate(R.layout.item_pan, this, false);
+        View headGroupView = LayoutInflater.from(getContext()).inflate(R.layout.item_pan, null);
         headGroupView.setLayoutParams(headParams);
         headParams.gravity = Gravity.CENTER_HORIZONTAL;
+        headGroupView.setVisibility(View.VISIBLE);
         addView(headGroupView);
-        float pivotx = headGroupView.getPivotX();
-        float pivoty = headGroupView.getPivotY();
-        println("pivotx: " + pivotx + "  pivoty: " + pivoty);
-        
-
-        headGroupView.setPivotX(90);
-        headGroupView.setPivotY(450);
-        headGroupView.setRotation(180);
+        int count = getChildCount();
+//        float pivotx = headGroupView.getPivotX();
+//        float pivoty = headGroupView.getPivotY();
+//        println("pivotx: " + pivotx + "  pivoty: " + pivoty);
+//        
+//
+//        headGroupView.setPivotX(90);
+//        headGroupView.setPivotY(450);
+//        headGroupView.setRotation(180);
 //        rotation(headGroupView);
     }
     

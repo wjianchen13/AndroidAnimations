@@ -25,7 +25,7 @@ public class PanActivity extends AppCompatActivity implements View.OnClickListen
     }
 
     public void onStop(View v) {
-
+        pvTest.addItemView();
     }
 
     @Override
