@@ -124,4 +124,15 @@
         android:textAllCaps="false"
         android:onClick="onOther" />
 
+    <Button
+        android:id="@+id/btn_test11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="SVGA 动画"
+        android:textAllCaps="false"
+        android:onClick="onSvga" />
+
 </LinearLayout>

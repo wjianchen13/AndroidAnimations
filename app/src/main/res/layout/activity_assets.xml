@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/btn_test"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="10dp"
+        android:text="Assets"
+        android:textAllCaps="false"
+        android:onClick="onAssets1" />
+
+    <com.opensource.svgaplayer.SVGAImageView
+        android:id="@+id/simgv_xml"
+        android:layout_height="100dp"
+        android:layout_width="100dp"
+        android:scaleType="fitCenter"
+        app:source="angel.svga"
+        app:antiAlias="true"/>
+    
+    <com.opensource.svgaplayer.SVGAImageView
+        android:id="@+id/simgv_xml1"
+        android:layout_height="100dp"
+        android:layout_width="100dp"
+        android:layout_toRightOf="@id/simgv_xml"
+        android:layout_marginLeft="10dp"
+        android:scaleType="fitCenter"
+        app:antiAlias="true"/>
+
+    <com.opensource.svgaplayer.SVGAImageView
+        android:id="@+id/simgv_xml2"
+        android:layout_height="252dp"
+        android:layout_width="262dp"
+        android:layout_below="@id/simgv_xml"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitCenter"
+        app:antiAlias="true"/>
+
+    <Button
+        android:id="@+id/btn_test1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Assets"
+        android:textAllCaps="false"
+        android:onClick="onAssets" />
+
+    <Button
+        android:id="@+id/btn_test2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_test1"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="其他"
+        android:textAllCaps="false"
+        android:onClick="onOther" />
+
+</RelativeLayout>

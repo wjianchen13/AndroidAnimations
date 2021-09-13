@@ -15,6 +15,7 @@ import com.cold.androidanimations.other.OtherActivity;
 import com.cold.androidanimations.pan.PanActivity;
 import com.cold.androidanimations.property.PropertyActivity;
 import com.cold.androidanimations.radar.RadarActivity;
+import com.cold.androidanimations.svga.SvgaActivity;
 import com.cold.androidanimations.tween.TweenActivity;
 
 /**
@@ -153,4 +154,16 @@ public class MainActivity extends AppCompatActivity {
         it.setClass(MainActivity.this, OtherActivity.class);
         startActivity(it);
     }
+
+    /**
+     * SVGA 动画
+     * @param
+     * @return
+     */
+    public void onSvga(View v) {
+        Intent it = new Intent();
+        it.setClass(MainActivity.this, SvgaActivity.class);
+        startActivity(it);
+    }
+    
 }
