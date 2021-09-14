@@ -37,5 +37,13 @@
         android:textAllCaps="false"
         android:onClick="onGradient" />
 
+    <Button
+        android:id="@+id/btn_reveal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="揭露动画"
+        android:textAllCaps="false"
+        android:onClick="onReveal" />
+
 </LinearLayout>
 

@@ -56,4 +56,14 @@ public class OtherActivity extends AppCompatActivity {
         it.setClass(OtherActivity.this, GradientTextViewActivity.class);
         startActivity(it);
     }
+
+    /**
+     * 揭露动画
+     * @param v
+     */
+    public void onReveal(View v) {
+        Intent it = new Intent();
+        it.setClass(OtherActivity.this, RevealActivity.class);
+        startActivity(it);
+    }
 }
