@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff">
+
+    <com.cold.androidanimations.other.GradientTextView
+        android:id="@+id/llyt_expand"
+        android:layout_width="73dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="20dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:text="5/8"
+        android:gravity="center"
+        android:background="@drawable/ic_wheel_game_num"/>
+    
+    <TextView
+        android:id="@+id/tv_test"
+        android:layout_width="73dp"
+        android:layout_height="26dp"
+        android:layout_below="@+id/llyt_expand"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:background="@drawable/ic_wheel_game_num"/>
+    
+    <Button
+        android:id="@+id/btn_add1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="add1"
+        android:textAllCaps="false"
+        android:onClick="onAdd1" />
+    
+    <Button
+        android:id="@+id/btn_add2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/btn_add1"
+        android:layout_toRightOf="@id/btn_add1"
+        android:text="add2"
+        android:textAllCaps="false"
+        android:onClick="onAdd2" />
+
+    <Button
+        android:id="@+id/btn_add3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/btn_add2"
+        android:layout_toRightOf="@id/btn_add2"
+        android:text="add3"
+        android:textAllCaps="false"
+        android:onClick="onAdd3" />
+
+    <Button
+        android:id="@+id/btn_add4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/btn_add3"
+        android:layout_toRightOf="@id/btn_add3"
+        android:text="add4"
+        android:textAllCaps="false"
+        android:onClick="onAdd4" />
+
+
+    <Button
+        android:id="@+id/btn_add5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/btn_add4"
+        android:layout_toRightOf="@id/btn_add4"
+        android:text="add5"
+        android:textAllCaps="false"
+        android:onClick="onTrans" />
+
+
+
+</RelativeLayout>
+

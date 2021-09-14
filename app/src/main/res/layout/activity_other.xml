@@ -29,5 +29,13 @@
         android:textAllCaps="false"
         android:onClick="onExpandTest" />
 
+    <Button
+        android:id="@+id/btn_gradient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="字体颜色渐变"
+        android:textAllCaps="false"
+        android:onClick="onGradient" />
+
 </LinearLayout>
 

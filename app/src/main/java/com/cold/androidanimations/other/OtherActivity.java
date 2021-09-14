@@ -46,5 +46,14 @@ public class OtherActivity extends AppCompatActivity {
         it.setClass(OtherActivity.this, ExpandViewTestActivity.class);
         startActivity(it);
     }
-    
+
+    /**
+     * 字体颜色渐变
+     * @param v
+     */
+    public void onGradient(View v) {
+        Intent it = new Intent();
+        it.setClass(OtherActivity.this, GradientTextViewActivity.class);
+        startActivity(it);
+    }
 }
