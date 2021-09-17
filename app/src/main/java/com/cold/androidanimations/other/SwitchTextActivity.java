@@ -57,7 +57,7 @@ public class SwitchTextActivity extends AppCompatActivity {
      * @param v
      */
     public void onScale(View v) {
-        imgvTest.setAnimation(getGameAnimSet());
+//        imgvTest.setAnimation(getGameAnimSet());
         imgvTest.startAnimation(getGameAnimSet());
     }
 

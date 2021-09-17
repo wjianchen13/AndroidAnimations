@@ -68,17 +68,56 @@
             android:background="#ffffff00"
             android:layout_marginRight="@dimen/expand_view_item_margin"/>
 
+        <com.cold.androidanimations.other.ExpandItemView
+            android:id="@+id/ex_item6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/ex_item4"
+            android:background="#ffffff00"
+            android:layout_marginRight="@dimen/expand_view_item_margin"/>
+
+
+        <com.cold.androidanimations.other.ExpandItemView
+            android:id="@+id/ex_item7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/ex_item4"
+            android:background="#ffffff00"
+            android:layout_marginRight="@dimen/expand_view_item_margin"/>
+
+
     </RelativeLayout>
 
-    <RelativeLayout
-        android:id="@+id/rlyt_expand"
+    <FrameLayout
+        android:id="@+id/rlyt_expand_test"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@id/rlyt_test"
         android:layout_marginTop="20dp"
+        android:background="#ff00ff">
+        <com.cold.androidanimations.other.ExpandItemView
+            android:id="@+id/ex_item11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/ex_item4"
+            android:background="#ffffff00"
+            android:layout_marginRight="@dimen/expand_view_item_margin"/>
+        
+        
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/rlyt_expand"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/rlyt_expand_test"
+        android:layout_marginTop="20dp"
         android:background="#ff00ffff">
 
-    </RelativeLayout>
+    </FrameLayout>
 
     <Button
         android:id="@+id/btn_test1"
