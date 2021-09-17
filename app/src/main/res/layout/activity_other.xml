@@ -45,5 +45,13 @@
         android:textAllCaps="false"
         android:onClick="onReveal" />
 
+    <Button
+        android:id="@+id/btn_roll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="滚动TextView"
+        android:textAllCaps="false"
+        android:onClick="onRoll" />
+
 </LinearLayout>
 

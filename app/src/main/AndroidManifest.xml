@@ -50,6 +50,7 @@
         <activity android:name="com.cold.androidanimations.other.ExpandViewTestActivity"/>
         <activity android:name="com.cold.androidanimations.other.GradientTextViewActivity"/>
         <activity android:name="com.cold.androidanimations.other.RevealActivity"/>
+        <activity android:name="com.cold.androidanimations.other.RollActivity"/>
         <activity android:name="com.cold.androidanimations.svga.SvgaActivity"/>
         <activity android:name="com.cold.androidanimations.svga.AssetsActivity"/>
         

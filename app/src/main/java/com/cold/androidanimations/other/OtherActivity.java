@@ -66,4 +66,14 @@ public class OtherActivity extends AppCompatActivity {
         it.setClass(OtherActivity.this, RevealActivity.class);
         startActivity(it);
     }
+
+    /**
+     * 滚动TextView
+     * @param v
+     */
+    public void onRoll(View v) {
+        Intent it = new Intent();
+        it.setClass(OtherActivity.this, RollActivity.class);
+        startActivity(it);
+    }
 }
