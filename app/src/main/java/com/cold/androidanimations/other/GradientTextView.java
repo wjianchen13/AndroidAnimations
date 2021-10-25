@@ -45,7 +45,7 @@ public class GradientTextView extends AppCompatTextView {
         if (changed) {
             getPaint().setShader(new LinearGradient(
                     0, 0, 0, getHeight(),
-                    new int[]{0xffc8fafe, 0xff055ef1}, new float[]
+                    new int[]{0xfffcfafd, 0xffdba376}, new float[]
                     { 0.3f, 0.7f},
                     Shader.TileMode.CLAMP));
         }

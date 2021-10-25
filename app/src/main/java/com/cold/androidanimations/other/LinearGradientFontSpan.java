@@ -41,8 +41,8 @@ public class LinearGradientFontSpan extends ReplacementSpan {
         LinearGradient lg = null;
         if(mode == 0){//上下渐变
             lg = new LinearGradient(0, 0, 0, paint.descent() - paint.ascent(),
-                    0xffc8fafe,
-                    0xff055ef1,
+                    0xffffffff,
+                    0xffffffff,
                     Shader.TileMode.CLAMP); //从上到下渐变
         }else{//左右渐变
 
