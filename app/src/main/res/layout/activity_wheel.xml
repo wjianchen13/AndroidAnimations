@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.cold.androidanimations.test.wheel.PrizeWheelView
+        android:id="@+id/wv"
+        android:layout_height="252dp"
+        android:layout_width="252dp"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/btn_test1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wv"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="add"
+        android:textAllCaps="false"
+        android:onClick="onAdd" />
+
+    <Button
+        android:id="@+id/btn_test2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/btn_test1"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="remove"
+        android:textAllCaps="false"
+        android:layout_toRightOf="@id/btn_test1"
+        android:onClick="onRemove" />
+
+    <com.cold.androidanimations.test.wheel.TestPrizeWheelView
+        android:id="@+id/wv_test"
+        android:layout_height="252dp"
+        android:layout_width="252dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/btn_test1"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/btn_test11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wv_test"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="add"
+        android:textAllCaps="false"
+        android:onClick="onAdd11" />
+
+    <Button
+        android:id="@+id/btn_test12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/btn_test11"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="remove"
+        android:textAllCaps="false"
+        android:layout_toRightOf="@id/btn_test11"
+        android:onClick="onRemove11" />
+
+</RelativeLayout>

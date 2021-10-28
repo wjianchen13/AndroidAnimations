@@ -4,23 +4,24 @@
     android:orientation="vertical">
 
     <Button
-        android:id="@+id/btn_test1"
+        android:id="@+id/btn_test5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="转盘"
+        android:textAllCaps="false"
+        android:onClick="onWheel" />
+
+    <Button
+        android:id="@+id/btn_test2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:gravity="center"
         android:padding="10dp"
-        android:text="透明度渐变"
+        android:text="其他"
         android:textAllCaps="false"
-        android:onClick="onTest" />
-
-    <ImageView
-        android:id="@+id/btn_test2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="260dp"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:src="@drawable/ic_praise" />
+        android:onClick="onOther1" />
 
 </LinearLayout>

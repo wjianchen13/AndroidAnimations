@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:id="@+id/prize_section_container">
+
+    <ImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:background="@drawable/ic_prize_wheel_empty_avatar"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:src="@drawable/ic_prize_wheel_avatar_border"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:id="@+id/iv_tag_me"
+        android:layout_width="20dp"
+        android:layout_height="10dp"
+        android:src="@drawable/ic_prize_wheel_tag_me"
+        android:layout_marginRight="-5dp"
+        android:layout_alignRight="@id/iv_avatar"
+        android:layout_alignTop="@id/iv_avatar"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/iv_avatar"
+        android:textSize="11sp"
+        android:textColor="#fff7f7"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:layout_marginBottom="35dp"
+        android:singleLine="true"
+        android:ellipsize="end" />
+
+</RelativeLayout>

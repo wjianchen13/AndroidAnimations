@@ -14,8 +14,10 @@ import com.cold.androidanimations.kk.RotateTestActivity;
 import com.cold.androidanimations.other.OtherActivity;
 import com.cold.androidanimations.pan.PanActivity;
 import com.cold.androidanimations.property.PropertyActivity;
+import com.cold.androidanimations.property.TestActivity;
 import com.cold.androidanimations.radar.RadarActivity;
 import com.cold.androidanimations.svga.SvgaActivity;
+import com.cold.androidanimations.test.TestActivity11;
 import com.cold.androidanimations.tween.TweenActivity;
 
 /**
@@ -163,6 +165,16 @@ public class MainActivity extends AppCompatActivity {
     public void onSvga(View v) {
         Intent it = new Intent();
         it.setClass(MainActivity.this, SvgaActivity.class);
+        startActivity(it);
+    }
+
+    /**
+     * 测试
+     * @param v
+     */
+    public void onTest(View v) {
+        Intent it = new Intent();
+        it.setClass(MainActivity.this, TestActivity11.class);
         startActivity(it);
     }
     
