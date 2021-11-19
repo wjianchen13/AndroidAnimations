@@ -18,12 +18,12 @@
 
     <com.opensource.svgaplayer.SVGAImageView
         android:id="@+id/simgv_xml"
-        android:layout_height="100dp"
         android:layout_width="100dp"
+        android:layout_height="100dp"
         android:scaleType="fitCenter"
-        app:source="angel.svga"
-        app:antiAlias="true"/>
-    
+        app:antiAlias="true"
+        app:source="dino_wheel_waitting.svga" />
+
     <com.opensource.svgaplayer.SVGAImageView
         android:id="@+id/simgv_xml1"
         android:layout_height="100dp"
