@@ -1,9 +1,11 @@
 package com.cold.androidanimations.property.objectanimator;
 
+import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
+import android.view.animation.AnimationSet;
 import android.view.animation.LinearInterpolator;
 
 import com.cold.androidanimations.R;
@@ -95,12 +97,15 @@ public class ObjectAnimatorActivity extends AppCompatActivity {
      */
     public void onScale(View v) {
         ObjectAnimator animator = ObjectAnimator.ofFloat(mView, "scaleX", 1f, 3f, 1f);
+        ObjectAnimator animator1 = ObjectAnimator.ofFloat(mView, "scaleY", 1f, 3f, 1f);
         // 表示的是:
         // 动画作用对象是mButton
         // 动画作用的对象的属性是X轴缩放
         // 动画效果是:放大到3倍,再缩小到初始大小
-        animator.setDuration(5000);
-        animator.start();
+        AnimatorSet set = new AnimatorSet();
+        set.play(animator).with(animator1);
+        set.setDuration(5000);
+        set.start();
     }
 
 }

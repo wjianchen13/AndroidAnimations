@@ -8,6 +8,17 @@
         android:orientation="vertical">
 
         <Button
+            android:id="@+id/btn_test17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="滚动卡顿"
+            android:textAllCaps="false"
+            android:onClick="onKa" />
+
+        <Button
             android:id="@+id/btn_test15"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

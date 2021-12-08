@@ -25,6 +25,15 @@ public class PropertyActivity extends AppCompatActivity {
     }
 
     /**
+     * 卡顿测试
+     */
+    public void onKa(View v) {
+        Intent it = new Intent();
+        it.setClass(PropertyActivity.this, KaActivity.class);
+        startActivity(it);
+    }
+
+    /**
      * 旋转
      * @param
      * @return
