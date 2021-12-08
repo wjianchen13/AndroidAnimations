@@ -56,6 +56,10 @@
         <activity android:name="com.cold.androidanimations.svga.AssetsActivity"/>
         <activity android:name="com.cold.androidanimations.test.TestActivity11" />
         <activity android:name="com.cold.androidanimations.test.wheel.WheelActivity" />
+        <activity android:name="com.cold.androidanimations.open.OpenActivity" />
+        <activity android:name="com.cold.androidanimations.open.Rotate3dActivity" />
+        <activity android:name="com.cold.androidanimations.open.TestOpenActivity" />
+        
         
     </application>
 

@@ -11,6 +11,9 @@ import com.cold.androidanimations.fans.LeonidsActivity;
 import com.cold.androidanimations.frame.FrameActivity;
 import com.cold.androidanimations.kk.RotateActivity;
 import com.cold.androidanimations.kk.RotateTestActivity;
+import com.cold.androidanimations.open.OpenActivity;
+import com.cold.androidanimations.open.Rotate3dActivity;
+import com.cold.androidanimations.open.TestOpenActivity;
 import com.cold.androidanimations.other.OtherActivity;
 import com.cold.androidanimations.pan.PanActivity;
 import com.cold.androidanimations.property.PropertyActivity;
@@ -36,6 +39,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    /**
+     * 翻牌动画效果
+     * @param
+     * @return
+     */
+    public void onOpen(View v) {
+        Intent it = new Intent();
+//        it.setClass(MainActivity.this, OpenActivity.class);
+//        it.setClass(MainActivity.this, Rotate3dActivity.class);
+        it.setClass(MainActivity.this, TestOpenActivity.class);
+        startActivity(it);
+    }
+    
     /**
      * 属性动画
      * @param

@@ -4,6 +4,17 @@
     android:orientation="vertical">
 
     <Button
+        android:id="@+id/btn_open"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="翻牌"
+        android:textAllCaps="false"
+        android:onClick="onOpen" />
+
+    <Button
         android:id="@+id/btn_testkk"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
