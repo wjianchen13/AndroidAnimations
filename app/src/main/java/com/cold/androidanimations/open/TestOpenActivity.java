@@ -20,8 +20,14 @@ public class TestOpenActivity extends AppCompatActivity {
     }
     
     public void onTest(View v) {
-        mOpenView.open();
+        mOpenView.open(R.drawable.ic_poker_a);
     }
-   
-    
+
+    public void onTest1(View v) {
+        mOpenView.reset();
+    }
+
+    public void onTest2(View v) {
+        mOpenView.light();
+    }
 }

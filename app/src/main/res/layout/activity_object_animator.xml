@@ -59,6 +59,17 @@
         android:onClick="onScale" />
 
     <Button
+        android:id="@+id/btn_test7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="测试"
+        android:textAllCaps="false"
+        android:onClick="onTest" />
+
+    <Button
         android:id="@+id/btn_test2"
         android:layout_width="50dp"
         android:layout_height="wrap_content"

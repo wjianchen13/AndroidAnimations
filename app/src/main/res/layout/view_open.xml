@@ -7,7 +7,8 @@
         android:id="@+id/imgv_front"
         android:layout_width="103dp"
         android:layout_height="143dp"
-        android:layout_centerInParent="true" />
+        android:layout_centerInParent="true" 
+        android:background="@drawable/bg_dino_poker_selector"/>
     
     <ImageView
         android:id="@+id/imgv_back"
@@ -15,5 +16,13 @@
         android:layout_height="143dp"
         android:layout_centerInParent="true"
         android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imgv_light"
+        android:layout_width="120dp"
+        android:layout_height="160dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/ic_poker_light"
+        android:visibility="visible" />
     
 </RelativeLayout>

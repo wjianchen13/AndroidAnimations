@@ -10,18 +10,38 @@
         android:layout_height="193dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
+        android:background="#004d26"
         />
 
     <Button
+        android:id="@+id/btn_test"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="test"
         android:gravity="center"
         android:textAllCaps="false"
         android:layout_alignParentBottom="true"
-        android:onClick="onTest"
+        android:onClick="onTest" />
 
-        />
+    <Button
+        android:id="@+id/btn_test1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="test1"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:layout_above="@id/btn_test"
+        android:onClick="onTest1" />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="test2"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:layout_above="@id/btn_test1"
+        android:onClick="onTest2" />
 
 
 </RelativeLayout>

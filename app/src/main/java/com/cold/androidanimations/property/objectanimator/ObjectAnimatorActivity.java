@@ -42,13 +42,13 @@ public class ObjectAnimatorActivity extends AppCompatActivity {
      * @return
      */
     public void onRotate(View v) {
-        ObjectAnimator animator = ObjectAnimator.ofFloat(mView, "rotation", 0f, 360f);
+        ObjectAnimator animator = ObjectAnimator.ofFloat(mView, "rotation", 0f, -150f);
 
         // 表示的是:
         // 动画作用对象是mButton
         // 动画作用的对象的属性是旋转alpha
         // 动画效果是:0 - 360
-        animator.setDuration(5000);
+        animator.setDuration(1000);
         animator.start();
     }
 
@@ -86,7 +86,7 @@ public class ObjectAnimatorActivity extends AppCompatActivity {
         // 动画作用的对象的属性是X轴平移（在Y轴上平移同理，采用属性"translationY"
         // 动画效果是:从当前位置平移到 x=1500 再平移到初始位置
         animator.setInterpolator(new LinearInterpolator());
-        animator.setDuration(5000);
+        animator.setDuration(1000);
         animator.start();
     }
 
@@ -108,4 +108,15 @@ public class ObjectAnimatorActivity extends AppCompatActivity {
         set.start();
     }
 
+    /**
+     * 测试
+     * @param
+     * @return
+     */
+    public void onTest(View v) {
+        mView.clearAnimation();
+        mView.setRotation(0);
+    }
+    
+    
 }

@@ -42,7 +42,7 @@ public class AssetsActivity extends AppCompatActivity {
      * @return
      */
     public void onAssets(View v) {
-        loadAnim(sImgvTest, "mp3_to_long.svga");
+        loadAnim(sImgvTest, "ic_poker_limit.svga");
     }
 
     private void loadAnim(final SVGAImageView v, String name) {

@@ -36,8 +36,8 @@ public class Rotate3dView extends View {
         camera = new Camera();
         BitmapFactory.Options options = new BitmapFactory.Options();
         options.inSampleSize = 1;
-        frontBitmap = BitmapFactory.decodeResource(getResources(),R.drawable.ic_jn,options);
-        backBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.ic_m,options);
+        frontBitmap = BitmapFactory.decodeResource(getResources(),R.drawable.ic_dino_poker_normal,options);
+        backBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.ic_k,options);
         paint = new Paint();
         paint.setColor(Color.RED);
         paint.setAntiAlias(true);

@@ -31,6 +31,7 @@
         android:layout_toRightOf="@id/simgv_xml"
         android:layout_marginLeft="10dp"
         android:scaleType="fitCenter"
+        android:background="#3fff0000"
         app:antiAlias="true"/>
 
     <com.opensource.svgaplayer.SVGAImageView

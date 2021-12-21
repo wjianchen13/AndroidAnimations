@@ -1,8 +1,5 @@
 package com.cold.androidanimations.open;
 
-import android.animation.Animator;
-import android.animation.ObjectAnimator;
-import android.animation.ValueAnimator;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
@@ -29,9 +26,9 @@ public class Rotate3dActivity extends AppCompatActivity {
         BitmapFactory.Options options = new BitmapFactory.Options();
         options.inSampleSize = 1;
         imageViews[0] = findViewById(R.id.front_view);
-        imageViews[0].setImageBitmap(BitmapFactory.decodeResource(getResources(),R.drawable.ic_jn,options));
+        imageViews[0].setImageBitmap(BitmapFactory.decodeResource(getResources(),R.drawable.ic_dino_poker_normal,options));
         imageViews[1] = findViewById(R.id.back_view);
-        imageViews[1].setImageBitmap(BitmapFactory.decodeResource(getResources(),R.drawable.ic_m,options));
+        imageViews[1].setImageBitmap(BitmapFactory.decodeResource(getResources(),R.drawable.ic_k,options));
 
 //        frontAnim = new ObjectAnimator();
 //        frontAnim.setFloatValues(0,90f);
