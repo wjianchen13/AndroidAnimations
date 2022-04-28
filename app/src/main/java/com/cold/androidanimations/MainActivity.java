@@ -11,13 +11,10 @@ import com.cold.androidanimations.fans.LeonidsActivity;
 import com.cold.androidanimations.frame.FrameActivity;
 import com.cold.androidanimations.kk.RotateActivity;
 import com.cold.androidanimations.kk.RotateTestActivity;
-import com.cold.androidanimations.open.OpenActivity;
-import com.cold.androidanimations.open.Rotate3dActivity;
 import com.cold.androidanimations.open.TestOpenActivity;
 import com.cold.androidanimations.other.OtherActivity;
 import com.cold.androidanimations.pan.PanActivity;
 import com.cold.androidanimations.property.PropertyActivity;
-import com.cold.androidanimations.property.TestActivity;
 import com.cold.androidanimations.radar.RadarActivity;
 import com.cold.androidanimations.svga.SvgaActivity;
 import com.cold.androidanimations.test.TestActivity11;
@@ -189,6 +186,16 @@ public class MainActivity extends AppCompatActivity {
      * @param v
      */
     public void onTest(View v) {
+        Intent it = new Intent();
+        it.setClass(MainActivity.this, TestActivity11.class);
+        startActivity(it);
+    }
+
+    /**
+     * 一个第三方库代码
+     * @param v
+     */
+    public void onThird(View v) {
         Intent it = new Intent();
         it.setClass(MainActivity.this, TestActivity11.class);
         startActivity(it);

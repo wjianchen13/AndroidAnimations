@@ -1,160 +1,175 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-
-    <Button
-        android:id="@+id/btn_open"
+    android:layout_height="match_parent">
+    
+    <LinearLayout 
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="翻牌"
-        android:textAllCaps="false"
-        android:onClick="onOpen" />
-
-    <Button
-        android:id="@+id/btn_testkk"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="旋转"
-        android:textAllCaps="false"
-        android:onClick="onRotate" />
-
-    <Button
-        android:id="@+id/btn_test9"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="旋转测试"
-        android:textAllCaps="false"
-        android:onClick="onRotateTest" />
-
-    <Button
-        android:id="@+id/btn_test1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="属性动画"
-        android:textAllCaps="false"
-        android:onClick="onProperty" />
-
-    <Button
-        android:id="@+id/btn_test2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="补间动画"
-        android:textAllCaps="false"
-        android:onClick="onTween" />
-
-    <Button
-        android:id="@+id/btn_test3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="帧动画"
-        android:textAllCaps="false"
-        android:onClick="onFrame" />
-
-    <Button
-        android:id="@+id/btn_test4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="显示隐藏动画"
-        android:textAllCaps="false"
-        android:onClick="onShow" />
-
-    <Button
-        android:id="@+id/btn_test5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="粒子动画"
-        android:textAllCaps="false"
-        android:onClick="onLeonids" />
-
-    <Button
-        android:id="@+id/btn_test6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="项目粉丝团动画封装"
-        android:textAllCaps="false"
-        android:onClick="onFans" />
-
-    <Button
-        android:id="@+id/btn_test7"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="雷达效果"
-        android:textAllCaps="false"
-        android:onClick="onRadar" />
-
-    <Button
-        android:id="@+id/btn_test8"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="转盘效果"
-        android:textAllCaps="false"
-        android:onClick="onPan" />
-
-    <Button
-        android:id="@+id/btn_test10"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="其他"
-        android:textAllCaps="false"
-        android:onClick="onOther" />
-
-    <Button
-        android:id="@+id/btn_test11"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="SVGA 动画"
-        android:textAllCaps="false"
-        android:onClick="onSvga" />
-
-    <Button
-        android:id="@+id/btn_test12"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="Test"
-        android:textAllCaps="false"
-        android:onClick="onTest" />
-
-</LinearLayout>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/btn_open"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="翻牌"
+            android:textAllCaps="false"
+            android:onClick="onOpen" />
+    
+        <Button
+            android:id="@+id/btn_testkk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="旋转"
+            android:textAllCaps="false"
+            android:onClick="onRotate" />
+    
+        <Button
+            android:id="@+id/btn_test9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="旋转测试"
+            android:textAllCaps="false"
+            android:onClick="onRotateTest" />
+    
+        <Button
+            android:id="@+id/btn_test1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="属性动画"
+            android:textAllCaps="false"
+            android:onClick="onProperty" />
+    
+        <Button
+            android:id="@+id/btn_test2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="补间动画"
+            android:textAllCaps="false"
+            android:onClick="onTween" />
+    
+        <Button
+            android:id="@+id/btn_test3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="帧动画"
+            android:textAllCaps="false"
+            android:onClick="onFrame" />
+    
+        <Button
+            android:id="@+id/btn_test4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="显示隐藏动画"
+            android:textAllCaps="false"
+            android:onClick="onShow" />
+    
+        <Button
+            android:id="@+id/btn_test5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="粒子动画"
+            android:textAllCaps="false"
+            android:onClick="onLeonids" />
+    
+        <Button
+            android:id="@+id/btn_test6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="项目粉丝团动画封装"
+            android:textAllCaps="false"
+            android:onClick="onFans" />
+    
+        <Button
+            android:id="@+id/btn_test7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="雷达效果"
+            android:textAllCaps="false"
+            android:onClick="onRadar" />
+    
+        <Button
+            android:id="@+id/btn_test8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="转盘效果"
+            android:textAllCaps="false"
+            android:onClick="onPan" />
+    
+        <Button
+            android:id="@+id/btn_test10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="其他"
+            android:textAllCaps="false"
+            android:onClick="onOther" />
+    
+        <Button
+            android:id="@+id/btn_test11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="SVGA 动画"
+            android:textAllCaps="false"
+            android:onClick="onSvga" />
+    
+        <Button
+            android:id="@+id/btn_test12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Test"
+            android:textAllCaps="false"
+            android:onClick="onTest" />
+        
+        <Button
+            android:id="@+id/btn_test13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="一个第三方库代码"
+            android:textAllCaps="false"
+            android:onClick="onThird" />
+        
+    </LinearLayout>
+</ScrollView>
