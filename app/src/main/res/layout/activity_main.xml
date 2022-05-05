@@ -167,9 +167,9 @@
             android:layout_alignParentBottom="true"
             android:gravity="center"
             android:padding="10dp"
-            android:text="一个第三方库代码"
+            android:text="SharedElement效果 微信查看图片"
             android:textAllCaps="false"
-            android:onClick="onThird" />
+            android:onClick="onShared" />
         
     </LinearLayout>
 </ScrollView>

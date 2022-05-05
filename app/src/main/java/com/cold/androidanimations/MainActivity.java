@@ -16,6 +16,8 @@ import com.cold.androidanimations.other.OtherActivity;
 import com.cold.androidanimations.pan.PanActivity;
 import com.cold.androidanimations.property.PropertyActivity;
 import com.cold.androidanimations.radar.RadarActivity;
+import com.cold.androidanimations.sharedelement.MainSharedElementActivity;
+import com.cold.androidanimations.sharedelement.SharedElementActivity;
 import com.cold.androidanimations.svga.SvgaActivity;
 import com.cold.androidanimations.test.TestActivity11;
 import com.cold.androidanimations.tween.TweenActivity;
@@ -192,12 +194,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * 一个第三方库代码
+     * SharedElement效果 微信查看图片
      * @param v
      */
-    public void onThird(View v) {
+    public void onShared(View v) {
         Intent it = new Intent();
-        it.setClass(MainActivity.this, TestActivity11.class);
+        it.setClass(MainActivity.this, MainSharedElementActivity.class);
         startActivity(it);
     }
     
