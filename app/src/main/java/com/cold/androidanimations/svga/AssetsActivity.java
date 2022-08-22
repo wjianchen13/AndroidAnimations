@@ -23,7 +23,7 @@ public class AssetsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_assets);
-        sImgvTest = findViewById(R.id.simgv_xml1);
+        sImgvTest = findViewById(R.id.simgv_xml);
         sImgvTest1 = findViewById(R.id.simgv_xml2);
     }
 
@@ -75,6 +75,26 @@ public class AssetsActivity extends AppCompatActivity {
      */
     public void onOther(View v) {
         loadAnim(sImgvTest1, "light.svga");
+    }
+
+    /**
+     * 停止动画测试
+     * @param
+     * @return
+     */
+    public void onStop(View v) {
+//        sImgvTest.stopAnimation();
+        sImgvTest.setVisibility(View.GONE);
+    }
+
+    /**
+     * 开始动画测试
+     * @param
+     * @return
+     */
+    public void onStart(View v) {
+//        sImgvTest.startAnimation();
+        sImgvTest.setVisibility(View.VISIBLE);
     }
     
 }

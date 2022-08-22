@@ -91,7 +91,7 @@ public class ObjectAnimatorActivity extends AppCompatActivity {
     }
 
     /**
-     * 平移
+     * 缩放
      * @param
      * @return
      */

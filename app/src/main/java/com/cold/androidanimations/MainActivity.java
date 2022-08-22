@@ -11,6 +11,7 @@ import com.cold.androidanimations.fans.LeonidsActivity;
 import com.cold.androidanimations.frame.FrameActivity;
 import com.cold.androidanimations.kk.RotateActivity;
 import com.cold.androidanimations.kk.RotateTestActivity;
+import com.cold.androidanimations.match.MatchActivity;
 import com.cold.androidanimations.open.TestOpenActivity;
 import com.cold.androidanimations.other.OtherActivity;
 import com.cold.androidanimations.pan.PanActivity;
@@ -202,5 +203,12 @@ public class MainActivity extends AppCompatActivity {
         it.setClass(MainActivity.this, MainSharedElementActivity.class);
         startActivity(it);
     }
-    
+
+    /**
+     * 随机匹配效果
+     * @param v
+     */
+    public void onMatch(View v) {
+        startActivity(new Intent(MainActivity.this, MatchActivity.class));
+    }
 }

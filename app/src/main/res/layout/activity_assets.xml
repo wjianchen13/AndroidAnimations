@@ -18,31 +18,47 @@
 
     <com.opensource.svgaplayer.SVGAImageView
         android:id="@+id/simgv_xml"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:scaleType="fitCenter"
+        android:layout_below="@id/btn_test"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
         app:antiAlias="true"
         app:source="dino_wheel_waitting.svga" />
 
     <com.opensource.svgaplayer.SVGAImageView
         android:id="@+id/simgv_xml1"
-        android:layout_height="100dp"
-        android:layout_width="100dp"
+        android:layout_width="48dp"
+        android:layout_height="30dp"
         android:layout_toRightOf="@id/simgv_xml"
         android:layout_marginLeft="10dp"
+        android:layout_alignTop="@id/simgv_xml"
         android:scaleType="fitCenter"
-        android:background="#3fff0000"
-        app:antiAlias="true"/>
+        app:antiAlias="true"
+        app:source="chat_free_96_60.svga"/>
 
     <com.opensource.svgaplayer.SVGAImageView
         android:id="@+id/simgv_xml2"
-        android:layout_height="252dp"
-        android:layout_width="262dp"
-        android:layout_below="@id/simgv_xml"
+        android:layout_width="63dp"
+        android:layout_height="30dp"
+        android:layout_toRightOf="@id/simgv_xml1"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_alignTop="@id/simgv_xml"
         android:scaleType="fitCenter"
-        app:antiAlias="true"/>
+        app:antiAlias="true"
+        app:source="chat_free_126_60.svga"/>
+
+    <com.opensource.svgaplayer.SVGAImageView
+        android:id="@+id/simgv_xml3"
+        android:layout_width="60dp"
+        android:layout_height="16dp"
+        android:layout_toRightOf="@id/simgv_xml2"
+        android:layout_marginLeft="10dp"
+        android:layout_alignTop="@id/simgv_xml2"
+        android:scaleType="fitCenter"
+        app:antiAlias="true"
+        app:source="chat_free_anchor.svga"/>
 
     <Button
         android:id="@+id/btn_test1"
@@ -65,5 +81,27 @@
         android:text="其他"
         android:textAllCaps="false"
         android:onClick="onOther" />
+
+    <Button
+        android:id="@+id/btn_test3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_test2"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="停止动画"
+        android:textAllCaps="false"
+        android:onClick="onStop" />
+
+    <Button
+        android:id="@+id/btn_test4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_test3"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="开始动画"
+        android:textAllCaps="false"
+        android:onClick="onStart" />
 
 </RelativeLayout>
