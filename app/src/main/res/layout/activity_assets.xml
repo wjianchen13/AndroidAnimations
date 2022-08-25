@@ -50,15 +50,15 @@
         app:source="chat_free_126_60.svga"/>
 
     <com.opensource.svgaplayer.SVGAImageView
-        android:id="@+id/simgv_xml3"
-        android:layout_width="60dp"
-        android:layout_height="16dp"
-        android:layout_toRightOf="@id/simgv_xml2"
-        android:layout_marginLeft="10dp"
-        android:layout_alignTop="@id/simgv_xml2"
-        android:scaleType="fitCenter"
-        app:antiAlias="true"
-        app:source="chat_free_anchor.svga"/>
+    android:id="@+id/simgv_xml3"
+    android:layout_width="60dp"
+    android:layout_height="16dp"
+    android:layout_toRightOf="@id/simgv_xml2"
+    android:layout_marginLeft="10dp"
+    android:layout_alignTop="@id/simgv_xml2"
+    android:scaleType="fitCenter"
+    app:antiAlias="true"
+    app:source="chat_free_anchor.svga"/>
 
     <Button
         android:id="@+id/btn_test1"

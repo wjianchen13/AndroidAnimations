@@ -45,7 +45,6 @@ public class HeadView extends AppCompatImageView {
         scaleX2.setDuration(1000);
         scaleY2.setDuration(1000);
 
-
         AnimatorSet set = new AnimatorSet();
         set.play(scaleX1).with(scaleY1);
         set.play(transY).after(scaleY1);
@@ -68,6 +67,12 @@ public class HeadView extends AppCompatImageView {
             @Override
             public void onAnimationEnd(Animator animator) {
 
+            }
+
+            @Override
+            public void onAnimationEnd(Animator animation, boolean isReverse) {
+                super.onAnimationEnd(animation, isReverse);
+                startAnim();
             }
         });
         set.start();

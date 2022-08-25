@@ -33,7 +33,7 @@ public class SvgaActivity extends AppCompatActivity {
      * @return
      */
     public void onOther(View v) {
-
+        startActivity(new Intent(this, AssetsOtherActivity.class));
     }
     
 }
