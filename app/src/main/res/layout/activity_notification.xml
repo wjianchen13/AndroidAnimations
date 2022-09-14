@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.cold.androidanimations.notification.TestView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="#ff00ff00"/>
+
+    <Button
+        android:id="@+id/btn_test1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="test1"
+        android:textAllCaps="false"
+        android:onClick="onTest1" />
+
+    <Button
+        android:id="@+id/btn_test2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_test1"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="test2"
+        android:textAllCaps="false"
+        android:onClick="onTest2" />
+
+    <Button
+        android:id="@+id/btn_test3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_test2"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="test3"
+        android:textAllCaps="false"
+        android:onClick="onTest3" />
+
+    <Button
+        android:id="@+id/btn_test4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_test3"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="test4"
+        android:textAllCaps="false"
+        android:onClick="onTest4" />
+
+</RelativeLayout>

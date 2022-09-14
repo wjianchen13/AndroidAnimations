@@ -167,6 +167,16 @@
             android:text="随机匹配效果"
             android:textAllCaps="false"
             android:onClick="onMatch" />
+
+        <Button
+            android:id="@+id/btn_test15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="从上往下弹出通知效果"
+            android:textAllCaps="false"
+            android:onClick="onNotification" />
         
     </LinearLayout>
 </ScrollView>

@@ -12,6 +12,7 @@ import com.cold.androidanimations.frame.FrameActivity;
 import com.cold.androidanimations.kk.RotateActivity;
 import com.cold.androidanimations.kk.RotateTestActivity;
 import com.cold.androidanimations.match.MatchActivity;
+import com.cold.androidanimations.notification.NotificationActivity;
 import com.cold.androidanimations.open.TestOpenActivity;
 import com.cold.androidanimations.other.OtherActivity;
 import com.cold.androidanimations.pan.PanActivity;
@@ -211,4 +212,13 @@ public class MainActivity extends AppCompatActivity {
     public void onMatch(View v) {
         startActivity(new Intent(MainActivity.this, MatchActivity.class));
     }
+
+    /**
+     * 从上往下弹出通知效果
+     * @param v
+     */
+    public void onNotification(View v) {
+        startActivity(new Intent(MainActivity.this, NotificationActivity.class));
+    }
+
 }

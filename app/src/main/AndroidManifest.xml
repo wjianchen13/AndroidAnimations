@@ -69,6 +69,7 @@
         <activity android:name="com.cold.androidanimations.match.MatchActivity" />
         <activity android:name="com.cold.androidanimations.match.MatchSingleActivity" />
         <activity android:name="com.cold.androidanimations.match.MatchGroupActivity" />
+        <activity android:name="com.cold.androidanimations.notification.NotificationActivity" />
 
     </application>
 
