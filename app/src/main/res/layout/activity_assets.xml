@@ -18,47 +18,53 @@
 
     <com.opensource.svgaplayer.SVGAImageView
         android:id="@+id/simgv_xml"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="360dp"
+        android:layout_height="96dp"
         android:scaleType="fitCenter"
         android:layout_below="@id/btn_test"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
         app:antiAlias="true"
-        app:source="dino_wheel_waitting.svga" />
+        app:source="main_send_gift.svga" />
+
+    <View
+        android:layout_width="150dp"
+        android:layout_height="52dp"
+        android:layout_alignLeft="@id/simgv_xml"
+        android:layout_alignTop="@id/simgv_xml"
+        android:background="@drawable/bg_main_notice"/>
 
     <com.opensource.svgaplayer.SVGAImageView
         android:id="@+id/simgv_xml1"
         android:layout_width="48dp"
         android:layout_height="30dp"
-        android:layout_toRightOf="@id/simgv_xml"
+        android:layout_below="@id/simgv_xml"
         android:layout_marginLeft="10dp"
-        android:layout_alignTop="@id/simgv_xml"
+        android:layout_marginTop="10dp"
         android:scaleType="fitCenter"
         app:antiAlias="true"
-        app:source="chat_free_96_60.svga"/>
+        app:source="chat_free_96_60.svga" />
 
     <com.opensource.svgaplayer.SVGAImageView
         android:id="@+id/simgv_xml2"
-        android:layout_width="63dp"
-        android:layout_height="30dp"
-        android:layout_toRightOf="@id/simgv_xml1"
+        android:layout_width="126dp"
+        android:layout_height="60dp"
+        android:layout_alignTop="@id/simgv_xml1"
         android:layout_marginLeft="10dp"
-        android:layout_alignTop="@id/simgv_xml"
+        android:layout_toRightOf="@id/simgv_xml1"
         android:scaleType="fitCenter"
         app:antiAlias="true"
-        app:source="chat_free_126_60.svga"/>
+        app:source="chat_free_126_60.svga" />
 
     <com.opensource.svgaplayer.SVGAImageView
-    android:id="@+id/simgv_xml3"
-    android:layout_width="60dp"
-    android:layout_height="16dp"
-    android:layout_toRightOf="@id/simgv_xml2"
-    android:layout_marginLeft="10dp"
-    android:layout_alignTop="@id/simgv_xml2"
-    android:scaleType="fitCenter"
-    app:antiAlias="true"
-    app:source="chat_free_anchor.svga"/>
+        android:id="@+id/simgv_xml3"
+        android:layout_width="60dp"
+        android:layout_height="16dp"
+        android:layout_toRightOf="@id/simgv_xml2"
+        android:layout_marginLeft="10dp"
+        android:layout_alignTop="@id/simgv_xml2"
+        android:scaleType="fitCenter"
+        app:antiAlias="true"
+        app:source="chat_free_anchor.svga"/>
 
     <Button
         android:id="@+id/btn_test1"
