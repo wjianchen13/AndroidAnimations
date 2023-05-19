@@ -57,6 +57,8 @@
         <activity android:name="com.cold.androidanimations.svga.SvgaActivity"/>
         <activity android:name="com.cold.androidanimations.svga.AssetsActivity"/>
         <activity android:name="com.cold.androidanimations.svga.AssetsOtherActivity"/>
+        <activity android:name="com.cold.androidanimations.svga.CacheActivity"/>
+        <activity android:name="com.cold.androidanimations.svga.PreloadActivity"/>
         <activity android:name="com.cold.androidanimations.test.TestActivity11" />
         <activity android:name="com.cold.androidanimations.test.wheel.WheelActivity" />
         <activity android:name="com.cold.androidanimations.open.OpenActivity" />
@@ -70,6 +72,7 @@
         <activity android:name="com.cold.androidanimations.match.MatchSingleActivity" />
         <activity android:name="com.cold.androidanimations.match.MatchGroupActivity" />
         <activity android:name="com.cold.androidanimations.notification.NotificationActivity" />
+
 
     </application>
 

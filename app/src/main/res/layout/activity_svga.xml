@@ -26,4 +26,26 @@
         android:textAllCaps="false"
         android:onClick="onOther" />
 
+    <Button
+        android:id="@+id/btn_test3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="公用缓存"
+        android:textAllCaps="false"
+        android:onClick="onCache" />
+
+    <Button
+        android:id="@+id/btn_test4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="预加载，占位"
+        android:textAllCaps="false"
+        android:onClick="onPreload" />
+
 </LinearLayout>

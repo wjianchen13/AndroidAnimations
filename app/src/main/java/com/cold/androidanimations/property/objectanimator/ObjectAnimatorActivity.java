@@ -2,6 +2,7 @@ package com.cold.androidanimations.property.objectanimator;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
@@ -42,13 +43,16 @@ public class ObjectAnimatorActivity extends AppCompatActivity {
      * @return
      */
     public void onRotate(View v) {
-        ObjectAnimator animator = ObjectAnimator.ofFloat(mView, "rotation", 0f, -150f);
+        ObjectAnimator animator = ObjectAnimator.ofFloat(mView, "rotation", 0f, -360f);
 
         // 表示的是:
         // 动画作用对象是mButton
         // 动画作用的对象的属性是旋转alpha
         // 动画效果是:0 - 360
-        animator.setDuration(1000);
+        animator.setRepeatCount(ObjectAnimator.INFINITE);
+        animator.setRepeatMode(ObjectAnimator.RESTART);
+        animator.setInterpolator(new LinearInterpolator());
+        animator.setDuration(2000);
         animator.start();
     }
 

@@ -28,12 +28,30 @@ public class SvgaActivity extends AppCompatActivity {
     }
 
     /**
-     * 补间动画
+     * 从文件目录中读取
      * @param
      * @return
      */
     public void onOther(View v) {
         startActivity(new Intent(this, AssetsOtherActivity.class));
+    }
+
+    /**
+     * 公用缓存
+     * @param
+     * @return
+     */
+    public void onCache(View v) {
+        startActivity(new Intent(this, CacheActivity.class));
+    }
+
+    /**
+     * 预加载 占位
+     * @param
+     * @return
+     */
+    public void onPreload(View v) {
+        startActivity(new Intent(this, PreloadActivity.class));
     }
     
 }
