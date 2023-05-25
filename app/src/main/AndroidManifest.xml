@@ -59,6 +59,7 @@
         <activity android:name="com.cold.androidanimations.svga.AssetsOtherActivity"/>
         <activity android:name="com.cold.androidanimations.svga.CacheActivity"/>
         <activity android:name="com.cold.androidanimations.svga.PreloadActivity"/>
+        <activity android:name="com.cold.androidanimations.svga.StaticActivity"/>
         <activity android:name="com.cold.androidanimations.test.TestActivity11" />
         <activity android:name="com.cold.androidanimations.test.wheel.WheelActivity" />
         <activity android:name="com.cold.androidanimations.open.OpenActivity" />

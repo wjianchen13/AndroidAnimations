@@ -1,0 +1,102 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.opensource.svgaplayer.SVGAImageView
+        android:id="@+id/svga_test1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="fitCenter"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        app:antiAlias="true" />
+
+    <com.opensource.svgaplayer.SVGAImageView
+        android:id="@+id/svga_test2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_alignTop="@id/svga_test1"
+        android:layout_toRightOf="@id/svga_test1"
+        android:scaleType="fitCenter"
+        app:antiAlias="true" />
+
+    <com.opensource.svgaplayer.SVGAImageView
+        android:id="@+id/svga_test3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_alignTop="@id/svga_test2"
+        android:layout_toRightOf="@id/svga_test2"
+        android:scaleType="fitCenter"
+        app:antiAlias="true" />
+
+    <com.opensource.svgaplayer.SVGAImageView
+        android:id="@+id/svga_test4"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignLeft="@id/svga_test2"
+        android:layout_below="@id/svga_test1"
+        android:scaleType="fitCenter"
+        app:antiAlias="true" />
+
+    <Button
+        android:id="@+id/btn_test1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:onClick="onTest1"
+        android:padding="10dp"
+        android:text="显示图片"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_test2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_test1"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="单独加载"
+        android:textAllCaps="false"
+        android:onClick="onTest2" />
+
+    <Button
+        android:id="@+id/btn_test3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_test2"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="开始播放一个"
+        android:textAllCaps="false"
+        android:onClick="onTest3" />
+
+    <Button
+        android:id="@+id/btn_test4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_test3"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="开始播放多个"
+        android:textAllCaps="false"
+        android:onClick="onTest4" />
+
+    <Button
+        android:id="@+id/btn_test5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_test4"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="停止播放"
+        android:textAllCaps="false"
+        android:onClick="onTest5" />
+
+
+</RelativeLayout>

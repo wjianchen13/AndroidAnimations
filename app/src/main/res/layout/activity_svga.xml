@@ -48,4 +48,15 @@
         android:textAllCaps="false"
         android:onClick="onPreload" />
 
+    <Button
+        android:id="@+id/btn_test5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="静态图片"
+        android:textAllCaps="false"
+        android:onClick="onStatic" />
+
 </LinearLayout>

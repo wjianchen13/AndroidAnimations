@@ -53,5 +53,14 @@ public class SvgaActivity extends AppCompatActivity {
     public void onPreload(View v) {
         startActivity(new Intent(this, PreloadActivity.class));
     }
+
+    /**
+     * 如果是静态图，直接显示，不动画
+     * @param
+     * @return
+     */
+    public void onStatic(View v) {
+        startActivity(new Intent(this, StaticActivity.class));
+    }
     
 }
