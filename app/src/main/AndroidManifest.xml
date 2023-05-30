@@ -30,7 +30,7 @@
         <activity android:name="com.cold.androidanimations.property.objectanimator.customcolor.CustomColorActivity"/>
         <activity android:name="com.cold.androidanimations.property.ViewPropertyAnimatorActivity"/>
         <activity android:name="com.cold.androidanimations.property.AnimatorSetActivity"/>
-        <activity android:name="com.cold.androidanimations.property.TestActivity"/>
+        <activity android:name="com.cold.androidanimations.property.AnimatorSetActivity1"/>
         <activity android:name="com.cold.androidanimations.property.TestActivity1"/>
         <activity android:name="com.cold.androidanimations.property.TestRotateActivity"/>
         <activity android:name="com.cold.androidanimations.property.TestRotateActivity1"/>

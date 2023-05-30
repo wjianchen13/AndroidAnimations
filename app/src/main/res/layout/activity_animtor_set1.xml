@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_test"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:text="Animator Set 动画测试"
+        android:layout_marginTop="10dp"
+        android:background="#ff00ff00" />
+
+    <Button
+        android:id="@+id/btn_test5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@id/tv_test"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:text="测试1"
+        android:textAllCaps="false"
+        android:onClick="onTest1" />
+
+    <Button
+        android:id="@+id/btn_test2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_test5"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="测试2"
+        android:textAllCaps="false"
+        android:onClick="onTest2" />
+
+</RelativeLayout>

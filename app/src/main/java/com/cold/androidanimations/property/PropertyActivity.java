@@ -123,13 +123,13 @@ public class PropertyActivity extends AppCompatActivity {
     }
 
     /**
-     * 测试
+     * AnimatorSet 测试
      * @param
      * @return
      */
     public void onTest(View v) {
         Intent it = new Intent();
-        it.setClass(PropertyActivity.this, TestActivity.class);
+        it.setClass(PropertyActivity.this, AnimatorSetActivity1.class);
         startActivity(it);
     }
 
