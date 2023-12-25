@@ -38,7 +38,7 @@ public class KaActivity extends AppCompatActivity {
         tvTip = findViewById(R.id.tv_tip);
     }
 
-    public void onStart(View v) {
+    public void onStart1(View v) {
         dinoAnimator1 = ObjectAnimator.ofFloat(tv1, "translationX", Utils.dip2px(this, 360), -Utils.dip2px(this, 360));
 //        dinoAnimator1 = ObjectAnimator.ofFloat(tv1, "translationX", Utils.dip2px(this, 360), -Utils.dip2px(this, 360));
 //        dinoAnimator1 = ObjectAnimator.ofPropertyValuesHolder(tv1, animatorX);
@@ -109,7 +109,7 @@ public class KaActivity extends AppCompatActivity {
         dinoAnimator1.start();
     }
 
-    public void onStart1(View v) {
+    public void onStart(View v) {
 
         dinoAnimator = ValueAnimator.ofFloat(Utils.dip2px(this, 360), -Utils.dip2px(this, 360));
         dinoAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {

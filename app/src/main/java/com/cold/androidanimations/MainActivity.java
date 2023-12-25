@@ -6,6 +6,7 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.cold.androidanimations.expand.ExpandActivity;
 import com.cold.androidanimations.fans.FansActivity;
 import com.cold.androidanimations.fans.LeonidsActivity;
 import com.cold.androidanimations.frame.FrameActivity;
@@ -219,6 +220,14 @@ public class MainActivity extends AppCompatActivity {
      */
     public void onNotification(View v) {
         startActivity(new Intent(MainActivity.this, NotificationActivity.class));
+    }
+
+    /**
+     * 伸缩动画
+     * @param v
+     */
+    public void onExpand(View v) {
+        startActivity(new Intent(MainActivity.this, ExpandActivity.class));
     }
 
 }

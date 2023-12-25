@@ -153,7 +153,6 @@ public class AssetsOtherActivity extends AppCompatActivity {
             String name = path + File.separator + "vip_entry_1.svga";
             SVGAParser.Companion.shareParser().init(this);
             SVGAParser svgaParser = SVGAParser.Companion.shareParser();
-
             File animFile = new File(name);
             FileInputStream fileInputStream = new FileInputStream(animFile);
             if (svgaParser != null) {
